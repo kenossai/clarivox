@@ -20,7 +20,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
     <style>
@@ -66,7 +66,7 @@
         }
 
         body {
-            font-family: 'Menlo', 'Courier New', monospace;
+            font-family: 'Montserrat', 'Courier New', monospace;
             background: var(--bg);
             color: var(--text)
         }
@@ -75,7 +75,7 @@
         h2,
         h3,
         h4 {
-            font-family: 'Playfair Display', Georgia, serif
+            font-family: 'Montserrat', Georgia, serif
         }
 
         a {
@@ -125,7 +125,7 @@
         .btn-nl {
             background: var(--accent);
             color: #fff;
-            font-family: 'Menlo', monospace;
+            font-family: 'Montserrat', monospace;
             font-size: 10px;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -185,7 +185,7 @@
         }
 
         .logo-name {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Montserrat', serif;
             font-weight: 900;
             font-size: 48px;
             line-height: 1;
@@ -224,7 +224,7 @@
             flex: 1;
             border: none;
             outline: none;
-            font-family: 'Menlo', monospace;
+            font-family: 'Montserrat', monospace;
             font-size: 14px;
             color: var(--input-color);
             padding: 0 12px;
@@ -248,7 +248,7 @@
         .btn-sub {
             background: var(--accent);
             color: #fff;
-            font-family: 'Menlo', monospace;
+            font-family: 'Montserrat', monospace;
             font-size: 10px;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -415,7 +415,7 @@
 
         /* Section header */
         .section-head {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Montserrat', serif;
             font-size: 24px;
             font-weight: 700;
             color: var(--text);
