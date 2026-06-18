@@ -245,7 +245,7 @@
             align-items: center
         }
 
-        .btn-sub {
+        .header-right .btn-search {
             background: var(--accent);
             color: #fff;
             font-family: 'Montserrat', monospace;
@@ -253,7 +253,7 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             height: 35px;
-            padding: 0 14px;
+            padding: 13px 14px;
             border: none;
             cursor: pointer;
             display: inline-flex;
@@ -676,16 +676,11 @@
                 <div class="header-right">
                     <form action="{{ route('news.search') }}" method="GET" class="search-form">
                         <input type="text" name="q" placeholder="Search…" value="{{ request('q') }}">
-                        <button type="submit" aria-label="Search">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8" />
-                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                            </svg>
+                        <button type="submit" aria-label="Search" class="btn-search">
+                            Search
                         </button>
                     </form>
-                    <a href="#newsletter" class="btn-sub">Subscribe</a>
+                    {{-- <a href="#newsletter" class="btn-sub">Search</a> --}}
                 </div>
             </div>
         </div>
