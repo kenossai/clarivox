@@ -27,10 +27,6 @@
                 <div class="col-xl-6 offset-xl-6 col-lg-5 offset-lg-7 col-md-4 offset-md-8 ps-xxl-5 ps-md-4">
                     <div class="circle-text-wrap position-relative overflow-hidden z-1" data-cue="slideInUp"
                         data-delay="300">
-                        <img src="assets/img/hero/circle-text-1.svg" alt="Circle Text" class="rotate position-relative z-1">
-                        <a data-fslightbox="" href="https://www.youtube.com/watch?v=u31qwQUeGuM"
-                            class="play-icon position-absolute d-flex flex-column align-items-center justify-content-center rounded-circle z-1 bg_primary"><i
-                                class="ri-play-large-fill"></i></a>
                     </div>
                 </div>
                 <div class="col-12">
