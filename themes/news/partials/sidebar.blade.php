@@ -20,8 +20,8 @@
         <h3 class="font-bold text-gray-900 text-lg border-b border-gray-200 pb-2 mb-4">Latest News</h3>
         @foreach (\App\Models\Article::published()->latest('published_at')->take(5)->get() as $article)
             <a href="{{ route('news.article.show', $article->slug) }}" class="flex gap-3 mb-4 group">
-                @if ($article->getFirstMediaUrl('featured_image'))
-                    <img src="{{ $article->getFirstMediaUrl('featured_image') }}"
+                @if ($article->featured_image_url)
+                    <img src="{{ $article->featured_image_url }}"
                         class="w-20 h-16 object-cover rounded-lg flex-shrink-0" alt="{{ $article->title }}">
                 @endif
                 <div class="flex-1">

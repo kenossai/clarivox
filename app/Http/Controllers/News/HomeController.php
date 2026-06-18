@@ -24,7 +24,7 @@ class HomeController extends Controller
       ->published()
       ->featured()
       ->latest('published_at')
-      ->take(3)
+      ->take(4)
       ->with(['category', 'author'])
       ->get();
 
@@ -38,10 +38,26 @@ class HomeController extends Controller
       ->where('status', 'published')
       ->withCount('articles')
       ->orderBy('sort_order')
-      ->take(8)
+      ->take(12)
       ->get();
 
-    return view('news::home', compact('featured', 'latest', 'categories'));
+    $trending = Article::where('site_id', $site->id)
+      ->published()
+      ->orderByDesc('views_count')
+      ->take(5)
+      ->with(['category'])
+      ->get();
+
+    $editorsPicks = Article::where('site_id', $site->id)
+      ->published()
+      ->featured()
+      ->latest('published_at')
+      ->skip(4)
+      ->take(4)
+      ->with(['category', 'tags'])
+      ->get();
+
+    return view('news::home', compact('featured', 'latest', 'categories', 'trending', 'editorsPicks'));
   }
 
   public function sitemap(): Response

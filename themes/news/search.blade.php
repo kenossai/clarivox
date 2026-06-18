@@ -27,8 +27,8 @@
                 <div class="article-card">
                     <a href="{{ route('news.article.show', $article->slug) }}">
                         <div class="img-block article-img">
-                            @if ($article->getFirstMediaUrl('featured_image'))
-                                <img src="{{ $article->getFirstMediaUrl('featured_image') }}" alt="{{ $article->title }}">
+                            @if ($article->featured_image_url)
+                                <img src="{{ $article->featured_image_url }}" alt="{{ $article->title }}">
                             @endif
                         </div>
                     </a>

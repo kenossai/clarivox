@@ -24,6 +24,7 @@ class Article extends Model implements HasMedia
     'slug',
     'excerpt',
     'content',
+    'featured_image',
     'status',
     'featured',
     'allow_comments',
@@ -85,6 +86,24 @@ class Article extends Model implements HasMedia
     $this->addMediaCollection('featured_image')->singleFile();
     $this->addMediaCollection('og_image')->singleFile();
     $this->addMediaCollection('content_images');
+  }
+
+  /**
+   * Returns the featured image URL, falling back to the direct column
+   * when no Spatie Media Library entry exists (e.g. uploaded via Filament FileUpload).
+   */
+  public function getFeaturedImageUrlAttribute(): ?string
+  {
+    $mediaUrl = $this->getFirstMediaUrl('featured_image');
+    if ($mediaUrl) {
+      return $mediaUrl;
+    }
+
+    if ($this->featured_image) {
+      return asset('storage/' . $this->featured_image);
+    }
+
+    return null;
   }
 
   // ─── Scopes ───────────────────────────────────────────────────────

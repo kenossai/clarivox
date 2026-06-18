@@ -24,6 +24,7 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TrashedFilter;
@@ -57,14 +58,17 @@ class ArticleResource extends Resource
         TextInput::make('slug')->required()->unique(ignoreRecord: true)->columnSpanFull(),
       ])->columns(3),
 
-      Section::make('Content')->schema([
+      Section::make('Media')->schema([
         FileUpload::make('featured_image')
           ->image()
           ->disk('public')
           ->directory('articles')
-          ->maxSize(5024)
-          ->label('Featured Image')
+          ->maxSize(5024) //5MB
           ->columnSpanFull(),
+      ])->columns(1),
+
+      Section::make('Content')->schema([
+
         Textarea::make('excerpt')->rows(3)->maxLength(500)->columnSpanFull(),
         RichEditor::make('content')
           ->fileAttachmentsDisk('public')
@@ -103,6 +107,7 @@ class ArticleResource extends Resource
   {
     return $table
       ->columns([
+        ImageColumn::make('featured_image')->label('Image')->disk('public')->height(50)->width(80),
         TextColumn::make('site.name')->badge()->color('blue')->sortable(),
         TextColumn::make('title')->searchable()->sortable()->limit(50),
         TextColumn::make('category.name')->badge()->color('gray'),

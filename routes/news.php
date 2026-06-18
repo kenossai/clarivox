@@ -7,6 +7,7 @@ use App\Http\Controllers\News\TagController;
 use App\Http\Controllers\News\AuthorController;
 use App\Http\Controllers\News\SearchController;
 use App\Http\Controllers\News\NewsletterController;
+use App\Http\Controllers\News\PageController as NewsPageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,5 +44,10 @@ Route::domain(config('cms.domains.news'))->group(function () {
 
     // Sitemap
     Route::get('/sitemap.xml', [NewsHomeController::class, 'sitemap'])->name('news.sitemap');
+
+    // Static pages
+    Route::get('/about', [NewsPageController::class, 'about'])->name('news.about');
+    Route::get('/subscribe', [NewsPageController::class, 'subscribe'])->name('news.subscribe');
+    Route::post('/subscribe', [NewsPageController::class, 'subscribeTrial'])->name('news.subscribe.trial');
   });
 });

@@ -23,20 +23,20 @@
             font-size: 36px;
             font-weight: 700;
             line-height: 1.25;
-            color: #2A1818;
+            color: var(--text);
             margin: 10px 0 14px
         }
 
         .article-divider {
             border: none;
-            border-top: 1px solid rgba(240, 234, 231, .4);
+            border-top: 1px solid var(--border-light);
             margin: 20px 0
         }
 
         .prose-content {
             font-size: 14px;
             line-height: 1.8;
-            color: #2A1818
+            color: var(--text)
         }
 
         .prose-content p {
@@ -58,14 +58,14 @@
         }
 
         .prose-content blockquote {
-            border-left: 3px solid #E74607;
+            border-left: 3px solid var(--accent);
             padding-left: 16px;
-            color: #9A8A84;
+            color: var(--text-muted);
             margin: 1.5em 0
         }
 
         .prose-content a {
-            color: #E74607
+            color: var(--accent)
         }
 
         .prose-content ul,
@@ -74,12 +74,18 @@
             margin-bottom: 1em
         }
 
+        .prose-content img {
+            max-width: 100%;
+            height: auto;
+            display: block
+        }
+
         .tags-row {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
             padding-top: 20px;
-            border-top: 1px solid rgba(240, 234, 231, .4);
+            border-top: 1px solid var(--border-light);
             margin-top: 20px
         }
 
@@ -87,15 +93,15 @@
             font-size: 10px;
             letter-spacing: 1px;
             text-transform: uppercase;
-            color: #9A8A84;
-            border: 1px solid rgba(42, 24, 24, .2);
+            color: var(--text-muted);
+            border: 1px solid var(--border);
             padding: 4px 10px
         }
 
         .tag-link:hover {
-            background: #E74607;
+            background: var(--accent);
             color: #fff;
-            border-color: #E74607
+            border-color: var(--accent)
         }
 
         .related-section {
@@ -106,7 +112,7 @@
             display: flex;
             gap: 12px;
             padding: 12px 0;
-            border-bottom: 1px solid rgba(240, 234, 231, .4)
+            border-bottom: 1px solid var(--border-light)
         }
 
         .related-img {
@@ -118,22 +124,22 @@
             font-size: 13px;
             font-weight: 700;
             line-height: 1.35;
-            color: #2A1818
+            color: var(--text)
         }
 
         .related-card h4 a:hover {
-            color: #E74607
+            color: var(--accent)
         }
 
         .comments-section {
             margin-top: 32px;
             padding-top: 24px;
-            border-top: 1px solid rgba(240, 234, 231, .4)
+            border-top: 1px solid var(--border-light)
         }
 
         .comment-item {
             padding: 16px 0;
-            border-bottom: 1px solid rgba(240, 234, 231, .4)
+            border-bottom: 1px solid var(--border-light)
         }
 
         .comment-author {
@@ -141,18 +147,18 @@
             font-weight: 700;
             letter-spacing: .5px;
             text-transform: uppercase;
-            color: #2A1818
+            color: var(--text)
         }
 
         .comment-date {
             font-size: 10px;
-            color: #9A8A84;
+            color: var(--text-muted);
             margin-top: 2px
         }
 
         .comment-text {
             font-size: 13px;
-            color: #2A1818;
+            color: var(--text);
             margin-top: 8px;
             line-height: 1.6
         }
@@ -162,21 +168,24 @@
         }
 
         .comment-form input,
-        .comment-form textarea {
+        .comment-form textarea,
+        .aside-box input[type="email"] {
             display: block;
             width: 100%;
-            border: 1px solid rgba(42, 24, 24, .2);
+            border: 1px solid var(--border);
             font-family: 'Menlo', monospace;
             font-size: 12px;
-            color: #2A1818;
+            color: var(--input-color);
+            background: var(--input-bg);
             padding: 10px 12px;
             outline: none;
             margin-bottom: 12px;
         }
 
         .comment-form input:focus,
-        .comment-form textarea:focus {
-            border-color: #E74607
+        .comment-form textarea:focus,
+        .aside-box input[type="email"]:focus {
+            border-color: var(--accent)
         }
 
         .comment-form .form-row {
@@ -186,7 +195,7 @@
         }
 
         .btn-comment {
-            background: #E74607;
+            background: var(--accent);
             color: #fff;
             font-family: 'Menlo', monospace;
             font-size: 10px;
@@ -198,7 +207,7 @@
         }
 
         .aside-box {
-            border-top: 2px solid #E74607;
+            border-top: 2px solid var(--accent);
             padding-top: 16px;
             margin-bottom: 28px
         }
@@ -208,7 +217,7 @@
             font-size: 10px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #E74607;
+            color: var(--accent);
             margin-bottom: 14px
         }
 
@@ -217,7 +226,7 @@
             flex-direction: column;
             gap: 6px;
             padding-bottom: 14px;
-            border-bottom: 1px solid rgba(240, 234, 231, .4);
+            border-bottom: 1px solid var(--border-light);
             margin-bottom: 14px
         }
 
@@ -230,11 +239,11 @@
             font-size: 13px;
             font-weight: 700;
             line-height: 1.35;
-            color: #2A1818
+            color: var(--text)
         }
 
         .aside-article h5 a:hover {
-            color: #E74607
+            color: var(--accent)
         }
 
         @media(max-width:900px) {
@@ -280,9 +289,9 @@
             <hr class="article-divider">
 
             {{-- Featured Image --}}
-            @if ($article->getFirstMediaUrl('featured_image'))
+            @if ($article->featured_image_url)
                 <div class="img-block article-hero">
-                    <img src="{{ $article->getFirstMediaUrl('featured_image') }}" alt="{{ $article->title }}">
+                    <img src="{{ $article->featured_image_url }}" alt="{{ $article->title }}">
                 </div>
             @endif
 
@@ -308,9 +317,8 @@
                         <div class="related-card">
                             <a href="{{ route('news.article.show', $rel->slug) }}">
                                 <div class="img-block related-img">
-                                    @if ($rel->getFirstMediaUrl('featured_image'))
-                                        <img src="{{ $rel->getFirstMediaUrl('featured_image') }}"
-                                            alt="{{ $rel->title }}">
+                                    @if ($rel->featured_image_url)
+                                        <img src="{{ $rel->featured_image_url }}" alt="{{ $rel->title }}">
                                     @endif
                                 </div>
                             </a>
@@ -344,14 +352,15 @@
                     @endforeach
 
                     @if (session('success'))
-                        <div style="background:#2A1818;color:#F0EAE7;padding:12px 16px;font-size:11px;margin:16px 0">
+                        <div
+                            style="background:var(--img-bg);color:var(--footer-text);padding:12px 16px;font-size:11px;margin:16px 0">
                             {{ session('success') }}
                         </div>
                     @endif
 
                     <div class="comment-form">
                         <div
-                            style="font-family:'Menlo',monospace;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#E74607;margin-bottom:16px">
+                            style="font-family:'Menlo',monospace;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--accent);margin-bottom:16px">
                             Leave a Comment</div>
                         <form action="{{ route('news.article.comment', $article->slug) }}" method="POST">
                             @csrf
