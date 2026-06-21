@@ -44,14 +44,10 @@
             </div>
         </div>
     </div>
-    <!-- Error Section End -->
-
-
     </div>
     </div>
 
     <!-- Link of JS files -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/megamenu.js') }}"></script>
     <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
