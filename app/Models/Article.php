@@ -48,6 +48,15 @@ class Article extends Model implements HasMedia
     return LogOptions::defaults()->logFillable();
   }
 
+  protected static function booted(): void
+  {
+    static::saving(function (Article $article) {
+      if ($article->status === 'published' && empty($article->published_at)) {
+        $article->published_at = now();
+      }
+    });
+  }
+
   // ─── Relationships ────────────────────────────────────────────────
 
   public function site(): BelongsTo

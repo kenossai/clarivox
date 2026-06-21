@@ -28,11 +28,16 @@ class HomeController extends Controller
       ->with(['category', 'author'])
       ->get();
 
+    $usedIds = $featured->pluck('id');
+
     $latest = Article::where('site_id', $site->id)
       ->published()
+      ->whereNotIn('id', $usedIds)
       ->latest('published_at')
       ->with(['category', 'author'])
       ->paginate(10);
+
+    $usedIds = $usedIds->merge($latest->pluck('id'));
 
     $categories = Category::where('site_id', $site->id)
       ->where('status', 'published')
@@ -43,16 +48,19 @@ class HomeController extends Controller
 
     $trending = Article::where('site_id', $site->id)
       ->published()
+      ->whereNotIn('id', $usedIds)
       ->orderByDesc('views_count')
       ->take(5)
       ->with(['category'])
       ->get();
 
+    $usedIds = $usedIds->merge($trending->pluck('id'));
+
     $editorsPicks = Article::where('site_id', $site->id)
       ->published()
       ->featured()
+      ->whereNotIn('id', $usedIds)
       ->latest('published_at')
-      ->skip(4)
       ->take(4)
       ->with(['category', 'tags'])
       ->get();
