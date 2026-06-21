@@ -57,7 +57,7 @@
         <div class="row align-items-end">
             <div class="col-xl-8 offset-xl-2 col-md-10 offset-md-1 text-center px-xxl-5">
                 <h6 class="section-subtitle style-two d-inline-block fs-13 ls-1 font-optional fw-semibold position-relative text_primary mb-25"
-                    data-cue="slideInUp"><img src="{{ asset('assets/img/icons/home-icon.svg') }}" alt="Icon">HOW WE ARE
+                    data-cue="slideInUp">HOW WE ARE
                 </h6>
                 <h2 class="section-title style-one fw-normal text-title mb-40" data-cue="slideInUp" data-delay="300">From
                     Architectural Concepts To <span class="fw-black">Final Finishes We Take Pride In Crafting Homes</span>
@@ -107,6 +107,156 @@
             </div>
         </div>
     </div>
+    {{-- About Section Start --}}
+    <div class="about-area style-three position-relative z-1 ptb-120">
+        <div class="move-text-wrapper overflow-hidden mb-120">
+            <div class="move-text style-two position-relative z-1">
+                <ul class="list-unstyled mb-0">
+                    <li class="position-relative font-secondary">FREE IN-HOME CONSULTATIONS</li>
+                    <li class="position-relative font-secondary">CUSTOM DESIGN SOLUTIONS</li>
+                    <li class="position-relative font-secondary">FLEXIBLE FINANCING OPTIONS</li>
+                    <li class="position-relative font-secondary">POST-RENOVATION SUPPORT</li>
+                    <li class="position-relative font-secondary">FREE IN-HOME CONSULTATIONS</li>
+                    <li class="position-relative font-secondary">CUSTOM DESIGN SOLUTIONS</li>
+                    <li class="position-relative font-secondary">FLEXIBLE FINANCING OPTIONS</li>
+                    <li class="position-relative font-secondary">POST-RENOVATION SUPPORT</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xxl-5 col-lg-5">
+                    <div class="about-img-wrap position-relative z-1 mb-md-30">
+                        <img src="assets/img/about/about-img-3.png" alt="Image" class="d-block tilt-img mx-auto"
+                            style="translate: none; rotate: none; scale: none; transform: perspective(2000px);">
+                        <img src="assets/img/about/shape-1.png" alt="Shape"
+                            class="about-shape position-absolute top-0 z-n1">
+                    </div>
+                </div>
+                <div class="col-xxl-6 offset-xxl-1 col-lg-7 ps-xxl-3 ps-xl-4">
+                    <div class="about-content position-relative">
+                        <h6
+                            class="section-subtitle style-two d-inline-block fs-13 ls-1 font-optional fw-semibold position-relative text_primary mb-20">
+                            <img src="assets/img/icons/home-icon.svg" alt="Icon">ABOUT US</h6>
+                        <h2 class="section-title style-one fw-normal text-title">Renius Home <span class="fw-black">Build
+                                Craft Was Founded On A Simple</span> Idea Great Homes</h2>
+                        <p class="mb-28">We believe that every home should reflect the people who live in it. With decades
+                            of experience in custom home construction</p>
+                        <div class="row gx-xxl-45">
+                            <div class="col-sm-6">
+                                <div class="feature-item position-relative">
+                                    <img src="assets/img/about/feature-icon-1.png" alt="Icon" class="feature-icon">
+                                    <h3 class="fs-16 fw-semibold">Decades Of Construction Experience</h3>
+                                    <p class="mb-0">Proven expertise in custom building quality craftsmanship.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-item position-relative">
+                                    <img src="assets/img/about/feature-icon-2.png" alt="Icon" class="feature-icon">
+                                    <h3 class="fs-16 fw-semibold">Craftsmanship Meets Modern Innovation</h3>
+                                    <p class="mb-0">We blend tested techniques with cutting-edge building.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-item position-relative">
+                                    <img src="assets/img/about/feature-icon-3.png" alt="Icon" class="feature-icon">
+                                    <h3 class="fs-16 fw-semibold">Built To Last With Quality Materials</h3>
+                                    <p class="mb-0">We use only premium, durable &amp; materials every project.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-item position-relative">
+                                    <img src="assets/img/about/feature-icon-4.png" alt="Icon" class="feature-icon">
+                                    <h3 class="fs-16 fw-semibold">Trusted By Homeowners Across</h3>
+                                    <p>A growing portfolio of satisfied &amp; successful custom builds.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="about.html" class="btn style-one d-inline-flex flex-wrap align-items-center p-0"><span
+                                class="btn-text d-inline-block fw-semibold position-relative transition">More About
+                                Us</span><span
+                                class="btn-icon position-relative d-flex flex-column align-items-center justify-content-center rounded-circle transition"><i
+                                    class="ri-arrow-right-up-line"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- About Section End --}}
+
+    {{-- Service Section Start --}}
+    <div class="bg-optional pt-120 pb-90 mb-120">
+        <div class="container">
+            <div class="row align-items-end mb-45">
+                <div class="col-lg-7 col-md-8">
+                    <h6 class="section-subtitle style-two d-inline-block fs-13 ls-1 font-optional fw-semibold position-relative text_primary mb-25" data-cue="slideInUp" data-show="true" style="animation-name: slideInUp; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+                        <img src="assets/img/icons/home-icon.svg" alt="Icon">
+                        OUR SERVICES
+                    </h6>
+                    <h2 class="section-title style-one fw-normal text-white" data-cue="slideInUp" data-delay="400" data-show="true" style="animation-name: slideInUp; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 400ms; animation-direction: normal; animation-fill-mode: both;">
+                        Project Management 
+                        <span class="fw-black">With Precision and Professional</span>
+                        Oversight
+                    </h2>
+                </div>
+                <div class="col-lg-5 col-md-4 text-md-end">
+                    <a href="services.html" class="btn style-one d-inline-flex flex-wrap align-items-center p-0">
+                        <span class="btn-text d-inline-block fw-semibold position-relative transition">View All Services</span>
+                        <span class="btn-icon position-relative d-flex flex-column align-items-center justify-content-center rounded-circle transition">
+                            <i class="ri-arrow-right-up-line"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="service-card-wrap style-one d-flex flex-wrap justify-content-center">
+                <div class="service-card style-three mb-30" data-cue="slideInUp" data-show="true" style="animation-name: slideInUp; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+                    <img src="assets/img/icons/custom-home.svg" alt="Icon">
+                    <h3 class="fs-24 fw-semibold">
+                        <a href="service-single.html" class="text-white link-hover-primary transition">Custom Home Construction</a>
+                    </h3>
+                    <p class="text-alto">We specialize in building fully customized homes from the ground Every lifestyle future goals</p>
+                    <a href="services.html" class="link style-one fw-semibold">
+                        Read More
+                        <img src="assets/img/icons/right-arrow-small.svg" alt="Icon">
+                    </a>
+                </div>
+                <div class="service-card style-three mb-30" data-cue="slideInUp" data-show="true" style="animation-name: slideInUp; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 180ms; animation-direction: normal; animation-fill-mode: both;">
+                    <img src="assets/img/icons/design.svg" alt="Icon">
+                    <h3 class="fs-24 fw-semibold">
+                        <a href="service-single.html" class="text-white link-hover-primary transition">Architectural Design &amp; Planning</a>
+                    </h3>
+                    <p class="text-alto">Our in-house designers work with you to turn your ideas elegant floor plans that balance</p>
+                    <a href="services.html" class="link style-one fw-semibold">
+                        Read More
+                        <img src="assets/img/icons/right-arrow-small.svg" alt="Icon">
+                    </a>
+                </div>
+                <div class="service-card style-three mb-30" data-cue="slideInUp" data-show="true" style="animation-name: slideInUp; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 360ms; animation-direction: normal; animation-fill-mode: both;">
+                    <img src="assets/img/icons/renovation.svg" alt="Icon">
+                    <h3 class="fs-24 fw-semibold">
+                        <a href="service-single.html" class="text-white link-hover-primary transition">Home Renovations &amp; Additions</a>
+                    </h3>
+                    <p class="text-alto">Whether you're remodeling a kitchen or adding deliver seamless upgrades integrate perfectly</p>
+                    <a href="services.html" class="link style-one fw-semibold">
+                        Read More
+                        <img src="assets/img/icons/right-arrow-small.svg" alt="Icon">
+                    </a>
+                </div>
+                <div class="service-card style-three mb-30" data-cue="slideInUp" data-show="true" style="animation-name: slideInUp; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+                    <img src="assets/img/icons/project-management.svg" alt="Icon">
+                    <h3 class="fs-24 fw-semibold">
+                        <a href="service-single.html" class="text-white link-hover-primary transition">Full-Service Project Management</a>
+                    </h3>
+                    <p class="text-alto">We handle scheduling, budgeting, permits, and quality control — you peace of mind</p>
+                    <a href="services.html" class="link style-one fw-semibold">
+                        Read More
+                        <img src="assets/img/icons/right-arrow-small.svg" alt="Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Service Section End -->
     {{-- Services Preview --}}
     {{-- @if ($services->isNotEmpty())

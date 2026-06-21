@@ -16,67 +16,13 @@
                      </div>
                      <ul class="menu-section p-0 mb-0 lh-1">
                          <li class="menu-item-has-children">
-                             <a href="javascript:void(0)" class="active">Home<i class="ri-add-line"></i></a>
-                             <ul class="menu-subs menu-column-1">
-                                 <li class="list-item">
-                                     <a href="index.html">Home - Renovation</a>
-                                 </li>
-                                 <li class="list-item">
-                                     <a href="index-2.html">Home - Building Construction</a>
-                                 </li>
-                                 <li class="list-item">
-                                     <a href="index-3.html" class="active">Home - Build Craft</a>
-                                 </li>
-                             </ul>
+                             <a href="{{ route('creative.home') }}" class="active">Home</a>
                          </li>
                          <li class="menu-item-has-children">
-                             <a href="javascript:void(0)">Pages<i class="ri-add-line"></i></a>
-                             <ul class="menu-subs menu-column-1">
-                                 <li><a href="about.html">About Us</a></li>
-                                 <li class="menu-item-has-children">
-                                     <a href="javascript:void(0)">Services<i class="ri-add-line"></i></a>
-                                     <ul class="menu-subs menu-column-1">
-                                         <li><a href="services.html">Services</a></li>
-                                         <li><a href="service-single.html">Service Single</a></li>
-                                     </ul>
-                                 </li>
-                                 <li class="menu-item-has-children">
-                                     <a href="javascript:void(0)">Team<i class="ri-add-line"></i></a>
-                                     <ul class="menu-subs menu-column-1">
-                                         <li><a href="team.html">Team</a></li>
-                                         <li><a href="team-single.html">Team Single</a></li>
-                                     </ul>
-                                 </li>
-                                 <li class="menu-item-has-children">
-                                     <a href="javascript:void(0)">Careers<i class="ri-add-line"></i></a>
-                                     <ul class="menu-subs menu-column-1">
-                                         <li><a href="careers.html">Careers</a></li>
-                                         <li><a href="career-single.html">Career Single</a></li>
-                                     </ul>
-                                 </li>
-                                 <li><a href="awards.html">Awards</a></li>
-                                 <li><a href="location.html">Location</a></li>
-                                 <li><a href="pricing-plan.html">Pricing Plan</a></li>
-                                 <li><a href="testimonials.html">Testimonials</a></li>
-                                 <li><a href="faq.html">FAQ</a></li>
-                                 <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                                 <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                 <li><a href="error-404.html">Error 404</a></li>
-                             </ul>
+                             <a href="javascript:void(0)">About Us</a>
                          </li>
                          <li class="menu-item-has-children">
-                             <a href="javascript:void(0)">Properties<i class="ri-add-line"></i></a>
-                             <ul class="menu-subs menu-column-1">
-                                 <li><a href="properties.html">Properties</a></li>
-                                 <li><a href="property-single.html">Property Single</a></li>
-                             </ul>
-                         </li>
-                         <li class="menu-item-has-children">
-                             <a href="javascript:void(0)">Projects<i class="ri-add-line"></i></a>
-                             <ul class="menu-subs menu-column-1">
-                                 <li><a href="projects.html">Projects</a></li>
-                                 <li><a href="project-single.html">Project Single</a></li>
-                             </ul>
+                             <a href="javascript:void(0)">Work</a>
                          </li>
                          <li class="menu-item-has-children">
                              <a href="javascript:void(0)">Blog<i class="ri-add-line"></i></a>
@@ -109,7 +55,7 @@
                                  </li>
                              </ul>
                          </li>
-                         <li><a href="contact.html">Contact Us</a></li>
+                         <li><a href="{{ route('creative.contact.show') }}">Contact Us</a></li>
                      </ul>
                  </nav>
              </div>
@@ -127,8 +73,7 @@
                                      class="contact-link d-flex flex-wrap align-items-center position-relative transition">
                                      <span
                                          class="contact-icon d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img
-                                             src="assets/img/icons/phone.svg" alt="Icon"
-                                             class="transition"></span>
+                                             src="assets/img/icons/phone.svg" alt="Icon" class="transition"></span>
                                      <div>
                                          <span class="text-white d-block">Call Us:</span>
                                          <span class="text_primary fw-semibold">+6857 886 960</span>
@@ -142,8 +87,7 @@
                                          class="btn-text d-inline-block fw-semibold position-relative transition">Get
                                          In Touch</span><span
                                          class="btn-icon position-relative d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img
-                                             src="assets/img/icons/up-right-arrow-black.svg"
-                                             alt="Image"></span></a>
+                                             src="assets/img/icons/up-right-arrow-black.svg" alt="Image"></span></a>
                              </div>
                          </div>
                      </div>
