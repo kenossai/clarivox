@@ -13,18 +13,63 @@ use App\Models\Tag;
 use App\Models\TeamMember;
 use App\Models\Testimonial;
 use App\Models\User;
+use App\Support\AdminPermissions;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
+use Spatie\Permission\PermissionRegistrar;
 
 class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        // ── Roles ────────────────────────────────────────────────────────
+        app(PermissionRegistrar::class)->forgetCachedPermissions();
+
+        // ── Roles & permissions ──────────────────────────────────────────
+        foreach (AdminPermissions::all() as $permission) {
+            Permission::firstOrCreate(['name' => $permission]);
+        }
+
         $superAdmin = Role::firstOrCreate(['name' => 'super_admin']);
-        Role::firstOrCreate(['name' => 'editor']);
-        Role::firstOrCreate(['name' => 'author']);
+        $editor = Role::firstOrCreate(['name' => 'editor']);
+        $author = Role::firstOrCreate(['name' => 'author']);
+
+        $superAdmin->syncPermissions(AdminPermissions::all());
+
+        $editorResources = [
+            'pages',
+            'services',
+            'portfolio projects',
+            'team members',
+            'testimonials',
+            'faqs',
+            'articles',
+            'categories',
+            'authors',
+            'comments',
+            'newsletter subscribers',
+        ];
+
+        $editorPermissions = [AdminPermissions::ACCESS_ADMIN];
+
+        foreach ($editorResources as $resource) {
+            foreach (['view_any', 'view', 'create', 'update', 'delete', 'delete_any', 'restore', 'restore_any'] as $action) {
+                $editorPermissions[] = AdminPermissions::for($action, $resource);
+            }
+        }
+
+        $editor->syncPermissions($editorPermissions);
+
+        $authorPermissions = [AdminPermissions::ACCESS_ADMIN];
+
+        foreach (['articles'] as $resource) {
+            foreach (['view_any', 'view', 'create', 'update'] as $action) {
+                $authorPermissions[] = AdminPermissions::for($action, $resource);
+            }
+        }
+
+        $author->syncPermissions($authorPermissions);
 
         // ── Admin User ───────────────────────────────────────────────────
         $admin = User::firstOrCreate(

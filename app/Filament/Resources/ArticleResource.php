@@ -21,6 +21,7 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Resources\Resource;
+use App\Filament\Resources\Concerns\AuthorizesResourcePermissions;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 use Filament\Tables\Columns\IconColumn;
@@ -34,6 +35,8 @@ use ZipStream\File;
 
 class ArticleResource extends Resource
 {
+  use AuthorizesResourcePermissions;
+
   protected static ?string $model = Article::class;
 
   protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-newspaper';

@@ -19,6 +19,7 @@ class Service extends Model implements HasMedia
     'excerpt',
     'description',
     'icon',
+    'image',
     'status',
     'sort_order',
     'meta_title',

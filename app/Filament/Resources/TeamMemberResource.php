@@ -12,6 +12,7 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
 use Filament\Resources\Resource;
+use App\Filament\Resources\Concerns\AuthorizesResourcePermissions;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -21,6 +22,8 @@ use Filament\Tables\Table;
 
 class TeamMemberResource extends Resource
 {
+  use AuthorizesResourcePermissions;
+
   protected static ?string $model = TeamMember::class;
 
   protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-user-group';

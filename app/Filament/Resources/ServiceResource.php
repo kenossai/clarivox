@@ -5,15 +5,18 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ServiceResource\Pages;
 use App\Models\Service;
 use App\Models\Site;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Schemas\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
 use Filament\Resources\Resource;
+use App\Filament\Resources\Concerns\AuthorizesResourcePermissions;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TrashedFilter;
@@ -22,6 +25,8 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class ServiceResource extends Resource
 {
+  use AuthorizesResourcePermissions;
+
   protected static ?string $model = Service::class;
 
   protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-briefcase';
@@ -48,6 +53,15 @@ class ServiceResource extends Resource
         RichEditor::make('description')->columnSpanFull(),
       ]),
 
+      Section::make('Media')->schema([
+        FileUpload::make('image')
+          ->image()
+          ->disk('public')
+          ->directory('services')
+          ->maxSize(5024)
+          ->columnSpanFull(),
+      ]),
+
       Section::make('SEO')->schema([
         TextInput::make('meta_title')->maxLength(70),
         TextInput::make('meta_description')->maxLength(160),
@@ -59,6 +73,7 @@ class ServiceResource extends Resource
   {
     return $table
       ->columns([
+        ImageColumn::make('image')->disk('public')->height(48)->width(72),
         TextColumn::make('site.name')->badge()->color('violet')->sortable(),
         TextColumn::make('icon'),
         TextColumn::make('title')->searchable()->sortable(),
