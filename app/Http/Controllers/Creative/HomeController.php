@@ -39,6 +39,20 @@ class HomeController extends Controller
       ->take(3)
       ->get();
 
+
+
     return view('creative::home', compact('services', 'projects', 'testimonials'));
+  }
+
+  public function about(SeoService $seo): View
+  {
+    $site = app('current.site');
+
+    $seo->fromSite($site)
+      ->title('About Us - ' . $site->name)
+      ->description($site->getSetting('meta_description', 'Learn more about our creative agency.'))
+      ->canonical(url('/about'));
+
+    return view('creative::about');
   }
 }

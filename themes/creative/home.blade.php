@@ -1,343 +1,218 @@
 @extends('creative::layouts.app')
 
+@section('title', 'Home - ' . config('app.name'))
 @section('content')
-    <!-- Hero Section Start -->
-    <div class="hero-area style-three position-relative overflow-hidden z-1">
-        <div class="hero-bg bg-f position-absolute top-0 start-0 w-100 h-100 transition"></div>
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-xxl-6 col-md-7 pe-xxl-5">
-                    <div class="hero-content mb-35">
-                        <h1 class="font-secondary fw-normal text-white mb-0" data-cue="slideInUp">Crafting <span
-                                class="fw-black">Homes Built To Last</span> Generations</h1>
-                    </div>
-                </div>
-                <div class="col-xl-4 offset-xl-2 col-lg-4 offset-lg-1 col-md-5 ps-xxl-5 mb-35">
-                    <div class="hero-para" data-cue="slideInUp">
-                        <p class="ms-xxl-5 mb-35">Home build craft was founded on a simple idea great homes begin with great
-                        </p>
-                        <a href="services.html"
-                            class="btn style-one d-inline-flex flex-wrap align-items-center p-0 ms-xxl-5"><span
-                                class="btn-text d-inline-block fw-semibold position-relative transition">Our
-                                Services</span><span
-                                class="btn-icon position-relative d-flex flex-column align-items-center justify-content-center rounded-circle transition"><i
-                                    class="ri-arrow-right-up-line"></i></span></a>
-                    </div>
-                </div>
-                <div class="col-xl-6 offset-xl-6 col-lg-5 offset-lg-7 col-md-4 offset-md-8 ps-xxl-5 ps-md-4">
-                    <div class="circle-text-wrap position-relative overflow-hidden z-1" data-cue="slideInUp"
-                        data-delay="300">
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="hero-transparent-text-wrap">
-                        <h6 class="section-subtitle style-two d-inline-block fs-13 ls-1 font-optional fw-semibold position-relative text_secondary mb-18"
-                            data-cue="slideInUp" data-delay="400"><img src="assets/img/icons/home-2.svg"
-                                alt="Icon">WHERE CRAFTSMANSHIP MEETS CONSTRUCTION EXCELLENCE</h6>
-                        <h2 class="hero-transparent-text font-secondary fw-black mb-0 d-flex flex-wrap align-items-center justify-content-between"
-                            data-cue="slideInUp" data-delay="500">
-                            <span>C</span>
-                            <span>L</span>
-                            <span>A</span>
-                            <span>R</span>
-                            <span>I</span>
-                            <span>V</span>
-                            <span>O</span>
-                            <span>X</span>
-                        </h2>
-                    </div>
-                </div>
+    <!--Home 3 Section 1-->
+    <div class="sec-1-home-3 pt-110 p-relative">
+        <div class="position-absolute w-100 h-100 d-grid top-0 md:grid-cols-7 gap-0 z-n1 opacity-10">
+            <div class="position-relative h-100 overflow-hidden d-md-block border-dark/01">
+                <div class="absolute bottom-0 left-0 right-0 border-white/10"></div>
             </div>
-        </div>
-    </div>
-    <!-- Hero Section End -->
-
-    <!-- Feature Section Start -->
-    <div class="container pb-90">
-        <div class="row align-items-end">
-            <div class="col-xl-8 offset-xl-2 col-md-10 offset-md-1 text-center px-xxl-5">
-                <h6 class="section-subtitle style-two d-inline-block fs-13 ls-1 font-optional fw-semibold position-relative text_primary mb-25"
-                    data-cue="slideInUp">HOW WE ARE
-                </h6>
-                <h2 class="section-title style-one fw-normal text-title mb-40" data-cue="slideInUp" data-delay="300">From
-                    Architectural Concepts To <span class="fw-black">Final Finishes We Take Pride In Crafting Homes</span>
-                    That Balance Functionality</h2>
+            <div class="position-relative h-100 overflow-hidden d-md-block border-dark/01">
+                <div class="absolute bottom-0 left-0 right-0 border-white/10"></div>
             </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-xl-4 col-md-6" data-cue="slideInUp">
-                <div class="feature-card style-three position-relative round-20 transition mb-30">
-                    <div class="br-one position-absolute top-0 start-0"></div>
-                    <div class="br-two position-absolute bottom-0 start-0"></div>
-                    <div class="feature-img rounded-circle position-relative z-1 d-block mx-auto">
-                        <img src="{{ asset('assets/img/features/zigzag-shape.svg') }}" alt="Shape"
-                            class="position-absolute top-0 start-0 w-100 h-100 z-1">
-                        <img src="{{ asset('assets/img/features/feature-img-1.jpg') }}" alt="Image"
-                            class="rounded-circle">
-                    </div>
-                    <h3 class="fs-24 font-primary fw-black">What We Do</h3>
-                    <p>Architectural concepts to final finishes we take pride in crafting homes </p>
-                    <a href="services.html" class="link style-one fw-semibold">Our Solution <img
-                            src="{{ asset('assets/img/icons/right-arrow-small.svg') }}" alt="Icon"></a>
-                </div>
+            <div class="position-relative h-100 overflow-hidden d-md-block border-dark/01">
+                <div class="absolute bottom-0 left-0 right-0 border-white/10"></div>
             </div>
-            <div class="col-xl-4 col-md-6" data-cue="slideInUp">
-                <div class="feature-card style-four position-relative z-1 overflow-hidden round-20 mb-30">
-                    <div class="feature-info">
-                        <h3 class="fs-24 font-primary fw-black">Our Impact</h3>
-                        <p>Building experience with passion creating custom homes that are as unique</p>
-                        <a href="projects.html" class="link style-one fw-semibold">See Our Projects <img
-                                src="{{ asset('assets/img/icons/right-arrow-small.svg') }}" alt="Icon"></a>
-                    </div>
-                    <img src="{{ asset('assets/img/features/feature-img-2.jpg') }}" alt="Image"
-                        class="position-absolute bottom-0 start-0 z-n1 transition">
-                </div>
-            </div>
-            <div class="col-xl-4 col-md-6" data-cue="slideInUp">
+            <div class="position-relative h-100 border-r border-dark/01 md:border-none">
+                <div class="absolute bottom-0 left-0 right-0 border-white/10"></div>
                 <div
-                    class="feature-card style-five bg-f position-relative overflow-hidden d-flex flex-column align-items-end justify-content-end round-20 z-1 mb-30">
-                    <div class="feature-info">
-                        <h3 class="fs-24 font-primary fw-black text-white">Core Values</h3>
-                        <p class="text-alto">Home Build Craft, we believe the difference is in the details Our team brings
-                        </p>
-                        <a href="about.html" class="link style-one fw-semibold">Discover More<img
-                                src="{{ asset('assets/img/icons/right-arrow-small.svg') }}" alt="Icon"></a>
-                    </div>
+                    class="absolute top-[20%] left-0 right-0 h-[30%] bg-gradient-to-b from-white/5 to-transparent pointer-events-none">
                 </div>
             </div>
-        </div>
-    </div>
-    {{-- About Section Start --}}
-    <div class="about-area style-three position-relative z-1 ptb-120">
-        <div class="move-text-wrapper overflow-hidden mb-120">
-            <div class="move-text style-two position-relative z-1">
-                <ul class="list-unstyled mb-0">
-                    <li class="position-relative font-secondary">FREE IN-HOME CONSULTATIONS</li>
-                    <li class="position-relative font-secondary">CUSTOM DESIGN SOLUTIONS</li>
-                    <li class="position-relative font-secondary">FLEXIBLE FINANCING OPTIONS</li>
-                    <li class="position-relative font-secondary">POST-RENOVATION SUPPORT</li>
-                    <li class="position-relative font-secondary">FREE IN-HOME CONSULTATIONS</li>
-                    <li class="position-relative font-secondary">CUSTOM DESIGN SOLUTIONS</li>
-                    <li class="position-relative font-secondary">FLEXIBLE FINANCING OPTIONS</li>
-                    <li class="position-relative font-secondary">POST-RENOVATION SUPPORT</li>
-                </ul>
+            <div class="position-relative h-100 overflow-hidden d-md-block border-dark/01">
+                <div class="absolute bottom-0 left-0 right-0 border-white/10"></div>
+            </div>
+            <div class="position-relative h-100 overflow-hidden d-md-block border-dark/01">
+                <div class="absolute bottom-0 left-0 right-0 border-white/10"></div>
+            </div>
+            <div class="position-relative h-100 overflow-hidden d-md-block border-dark/01">
+                <div class="absolute bottom-0 left-0 right-0 border-white/10"></div>
             </div>
         </div>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xxl-5 col-lg-5">
-                    <div class="about-img-wrap position-relative z-1 mb-md-30">
-                        <img src="assets/img/about/about-img-3.png" alt="Image" class="d-block tilt-img mx-auto"
-                            style="translate: none; rotate: none; scale: none; transform: perspective(2000px);">
-                        <img src="assets/img/about/shape-1.png" alt="Shape"
-                            class="about-shape position-absolute top-0 z-n1">
-                    </div>
-                </div>
-                <div class="col-xxl-6 offset-xxl-1 col-lg-7 ps-xxl-3 ps-xl-4">
-                    <div class="about-content position-relative">
-                        <h6
-                            class="section-subtitle style-two d-inline-block fs-13 ls-1 font-optional fw-semibold position-relative text_primary mb-20">
-                            <img src="assets/img/icons/home-icon.svg" alt="Icon">ABOUT US</h6>
-                        <h2 class="section-title style-one fw-normal text-title">Renius Home <span class="fw-black">Build
-                                Craft Was Founded On A Simple</span> Idea Great Homes</h2>
-                        <p class="mb-28">We believe that every home should reflect the people who live in it. With decades
-                            of experience in custom home construction</p>
-                        <div class="row gx-xxl-45">
-                            <div class="col-sm-6">
-                                <div class="feature-item position-relative">
-                                    <img src="assets/img/about/feature-icon-1.png" alt="Icon" class="feature-icon">
-                                    <h3 class="fs-16 fw-semibold">Decades Of Construction Experience</h3>
-                                    <p class="mb-0">Proven expertise in custom building quality craftsmanship.</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="feature-item position-relative">
-                                    <img src="assets/img/about/feature-icon-2.png" alt="Icon" class="feature-icon">
-                                    <h3 class="fs-16 fw-semibold">Craftsmanship Meets Modern Innovation</h3>
-                                    <p class="mb-0">We blend tested techniques with cutting-edge building.</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="feature-item position-relative">
-                                    <img src="assets/img/about/feature-icon-3.png" alt="Icon" class="feature-icon">
-                                    <h3 class="fs-16 fw-semibold">Built To Last With Quality Materials</h3>
-                                    <p class="mb-0">We use only premium, durable &amp; materials every project.</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="feature-item position-relative">
-                                    <img src="assets/img/about/feature-icon-4.png" alt="Icon" class="feature-icon">
-                                    <h3 class="fs-16 fw-semibold">Trusted By Homeowners Across</h3>
-                                    <p>A growing portfolio of satisfied &amp; successful custom builds.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="about.html" class="btn style-one d-inline-flex flex-wrap align-items-center p-0"><span
-                                class="btn-text d-inline-block fw-semibold position-relative transition">More About
-                                Us</span><span
-                                class="btn-icon position-relative d-flex flex-column align-items-center justify-content-center rounded-circle transition"><i
-                                    class="ri-arrow-right-up-line"></i></span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {{-- About Section End --}}
+        <div class="container pt-xxl-0 pt-110">
+            <div class="row g-xxl-5 g-4 align-items-center">
 
-    {{-- Service Section Start --}}
-    <div class="bg-optional pt-120 pb-90 mb-120">
-        <div class="container">
-            <div class="row align-items-end mb-45">
-                <div class="col-lg-7 col-md-8">
-                    <h6 class="section-subtitle style-two d-inline-block fs-13 ls-1 font-optional fw-semibold position-relative text_primary mb-25" data-cue="slideInUp" data-show="true" style="animation-name: slideInUp; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-                        <img src="assets/img/icons/home-icon.svg" alt="Icon">
-                        OUR SERVICES
-                    </h6>
-                    <h2 class="section-title style-one fw-normal text-white" data-cue="slideInUp" data-delay="400" data-show="true" style="animation-name: slideInUp; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 400ms; animation-direction: normal; animation-fill-mode: both;">
-                        Project Management 
-                        <span class="fw-black">With Precision and Professional</span>
-                        Oversight
-                    </h2>
-                </div>
-                <div class="col-lg-5 col-md-4 text-md-end">
-                    <a href="services.html" class="btn style-one d-inline-flex flex-wrap align-items-center p-0">
-                        <span class="btn-text d-inline-block fw-semibold position-relative transition">View All Services</span>
-                        <span class="btn-icon position-relative d-flex flex-column align-items-center justify-content-center rounded-circle transition">
-                            <i class="ri-arrow-right-up-line"></i>
+                <div class="col-xxl-6 col-lg-5 align-self-center order-1 order-lg-2">
+                    <span class="at-btn common-black text-uppercase bg-transparent mb-10 rounded-0 p-0">
+                        <span class="text-uppercase">
+                            <span class="text-1">CLARIVOX Creatives</span>
+                            <span class="text-2">CLARIVOX Creatives</span>
                         </span>
-                    </a>
+                        <i>
+                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.21967 9.40717C-0.0732232 9.70006 -0.0732232 10.1749 0.21967 10.4678C0.512563 10.7607 0.987437 10.7607 1.28033 10.4678L0.21967 9.40717ZM10.6875 0.75C10.6875 0.335786 10.3517 2.97145e-09 9.9375 1.50485e-07L3.1875 -2.70983e-07C2.77329 -2.70983e-07 2.4375 0.335786 2.4375 0.75C2.4375 1.16421 2.77329 1.5 3.1875 1.5H9.1875V7.5C9.1875 7.91421 9.52329 8.25 9.9375 8.25C10.3517 8.25 10.6875 7.91421 10.6875 7.5L10.6875 0.75ZM0.75 9.9375L1.28033 10.4678L10.4678 1.28033L9.9375 0.75L9.40717 0.21967L0.21967 9.40717L0.75 9.9375Z"
+                                    fill="currentColor" />
+                            </svg>
+                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.21967 9.40717C-0.0732232 9.70006 -0.0732232 10.1749 0.21967 10.4678C0.512563 10.7607 0.987437 10.7607 1.28033 10.4678L0.21967 9.40717ZM10.6875 0.75C10.6875 0.335786 10.3517 2.97145e-09 9.9375 1.50485e-07L3.1875 -2.70983e-07C2.77329 -2.70983e-07 2.4375 0.335786 2.4375 0.75C2.4375 1.16421 2.77329 1.5 3.1875 1.5H9.1875V7.5C9.1875 7.91421 9.52329 8.25 9.9375 8.25C10.3517 8.25 10.6875 7.91421 10.6875 7.5L10.6875 0.75ZM0.75 9.9375L1.28033 10.4678L10.4678 1.28033L9.9375 0.75L9.40717 0.21967L0.21967 9.40717L0.75 9.9375Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </i>
+                    </span>
+                    <h1 class="fw-900 lh-1 mt-10">We tell the stories shaping Africa's
+                        <span class="theme-primary">future</span>
+                    </h1>
+                    <p class="fz-font-lg neutral-500 mb-65 mt-25">We connect culture with commerce, helping visionary
+                        brands, influential personalities, creative industries, governments, and institutions build
+                        relevance, spark meaningful conversations, and drive impactful change.</p>
+                    <div class="d-flex flex-wrap align-items-center gap-4">
+                        <div class="at-btn-group at_fade_anim" data-delay=".4" data-fade-from="bottom" data-ease="bounce">
+                            <a class="at-btn-circle" href="https://orisa-html-demo.pages.dev/portfolio-1.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15"
+                                    fill="none">
+                                    <path
+                                        d="M0.0001297 8.99993L0 3.00407e-05L2 0L2.0001 6.99993L12.1719 7.00003L8.22224 3.05027L9.63644 1.63606L16.0003 8.00003L9.63644 14.364L8.22224 12.9497L12.1719 9.00003L0.0001297 8.99993Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </a>
+                            <a class="at-btn z-index-1" href="https://orisa-html-demo.pages.dev/portfolio-1.html">Connect
+                                with Us</a>
+                            <a class="at-btn-circle" href="https://orisa-html-demo.pages.dev/portfolio-1.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15"
+                                    fill="none">
+                                    <path
+                                        d="M0.0001297 8.99993L0 3.00407e-05L2 0L2.0001 6.99993L12.1719 7.00003L8.22224 3.05027L9.63644 1.63606L16.0003 8.00003L9.63644 14.364L8.22224 12.9497L12.1719 9.00003L0.0001297 8.99993Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="service-card-wrap style-one d-flex flex-wrap justify-content-center">
-                <div class="service-card style-three mb-30" data-cue="slideInUp" data-show="true" style="animation-name: slideInUp; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-                    <img src="assets/img/icons/custom-home.svg" alt="Icon">
-                    <h3 class="fs-24 fw-semibold">
-                        <a href="service-single.html" class="text-white link-hover-primary transition">Custom Home Construction</a>
-                    </h3>
-                    <p class="text-alto">We specialize in building fully customized homes from the ground Every lifestyle future goals</p>
-                    <a href="services.html" class="link style-one fw-semibold">
-                        Read More
-                        <img src="assets/img/icons/right-arrow-small.svg" alt="Icon">
-                    </a>
+                <div class="col-xxl-1 mt-150 order-lg-3 order-5 d-none d-xxl-block align-self-start">
+                    <svg class="rotate-infinite" xmlns="http://www.w3.org/2000/svg" width="57" height="57"
+                        viewBox="0 0 57 57" fill="none">
+                        <path
+                            d="M4.4275 53.66C16.0138 44.9195 21.807 40.5492 28.5001 40.5492C35.1932 40.5492 40.9863 44.9195 52.5727 53.66L56.9999 56.9999L53.6601 52.5727C44.9195 40.9863 40.5492 35.1932 40.5492 28.5001C40.5492 21.807 44.9195 16.0138 53.66 4.42751L57 0.000133148L52.5727 3.34004C40.9863 12.0806 35.1932 16.4509 28.5001 16.4509C21.807 16.4509 16.0138 12.0806 4.4275 3.34004L0 0L3.34004 4.42749C12.0806 16.0138 16.4509 21.807 16.4509 28.5001C16.4509 35.1932 12.0806 40.9863 3.34005 52.5726L0.000112182 57L4.4275 53.66Z"
+                            fill="#CACACA" />
+                    </svg>
                 </div>
-                <div class="service-card style-three mb-30" data-cue="slideInUp" data-show="true" style="animation-name: slideInUp; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 180ms; animation-direction: normal; animation-fill-mode: both;">
-                    <img src="assets/img/icons/design.svg" alt="Icon">
-                    <h3 class="fs-24 fw-semibold">
-                        <a href="service-single.html" class="text-white link-hover-primary transition">Architectural Design &amp; Planning</a>
-                    </h3>
-                    <p class="text-alto">Our in-house designers work with you to turn your ideas elegant floor plans that balance</p>
-                    <a href="services.html" class="link style-one fw-semibold">
-                        Read More
-                        <img src="assets/img/icons/right-arrow-small.svg" alt="Icon">
-                    </a>
-                </div>
-                <div class="service-card style-three mb-30" data-cue="slideInUp" data-show="true" style="animation-name: slideInUp; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 360ms; animation-direction: normal; animation-fill-mode: both;">
-                    <img src="assets/img/icons/renovation.svg" alt="Icon">
-                    <h3 class="fs-24 fw-semibold">
-                        <a href="service-single.html" class="text-white link-hover-primary transition">Home Renovations &amp; Additions</a>
-                    </h3>
-                    <p class="text-alto">Whether you're remodeling a kitchen or adding deliver seamless upgrades integrate perfectly</p>
-                    <a href="services.html" class="link style-one fw-semibold">
-                        Read More
-                        <img src="assets/img/icons/right-arrow-small.svg" alt="Icon">
-                    </a>
-                </div>
-                <div class="service-card style-three mb-30" data-cue="slideInUp" data-show="true" style="animation-name: slideInUp; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-                    <img src="assets/img/icons/project-management.svg" alt="Icon">
-                    <h3 class="fs-24 fw-semibold">
-                        <a href="service-single.html" class="text-white link-hover-primary transition">Full-Service Project Management</a>
-                    </h3>
-                    <p class="text-alto">We handle scheduling, budgeting, permits, and quality control — you peace of mind</p>
-                    <a href="services.html" class="link style-one fw-semibold">
-                        Read More
-                        <img src="assets/img/icons/right-arrow-small.svg" alt="Icon">
-                    </a>
+                <div class="col-lg-4 col-md-6 order-3">
+                    <div class="p-relative rounded-4 fix cilent-word-wide changeless">
+                        <img class="img-cover" src="{{ asset('assets/imgs/pages/img-55.webp') }}" alt="orisa">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!--Home 3 Section 2-->
+    <div class="sec-2-home-3">
+        <div class="bg-neutral-900 py-5 changeless carouselTicker carouselTicker-right">
+            <ul class="d-flex align-items-center justify-content-center gap-4 carouselTicker__list scroll-move-left">
+                <li class="d-flex align-items-center gap-4">
+                    <h1 class="h5 neutral-0 mb-0 text-nowrap">Media Relations</h1>
+                    <svg class="scroll-rotate" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                        viewBox="0 0 40 40" fill="none">
+                        <path
+                            d="M20 0C20.3015 10.9184 29.0816 19.6985 40 20C29.0816 20.3015 20.3015 29.0816 20 40C19.6985 29.0816 10.9184 20.3015 0 20C10.9184 19.6985 19.6985 10.9184 20 0Z"
+                            fill="#FEFEFE" />
+                    </svg>
+                </li>
+                <li class="d-flex align-items-center gap-4">
+                    <h1 class="h5 neutral-0 mb-0 text-nowrap">Press Engagement</h1>
+                    <svg class="scroll-rotate" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                        viewBox="0 0 40 40" fill="none">
+                        <path
+                            d="M20 0C20.3015 10.9184 29.0816 19.6985 40 20C29.0816 20.3015 20.3015 29.0816 20 40C19.6985 29.0816 10.9184 20.3015 0 20C10.9184 19.6985 19.6985 10.9184 20 0Z"
+                            fill="#FEFEFE" />
+                    </svg>
+                </li>
+                <li class="d-flex align-items-center gap-4">
+                    <h1 class="h5 neutral-0 mb-0 text-nowrap">Influencer</h1>
+                    <svg class="scroll-rotate" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                        viewBox="0 0 40 40" fill="none">
+                        <path
+                            d="M20 0C20.3015 10.9184 29.0816 19.6985 40 20C29.0816 20.3015 20.3015 29.0816 20 40C19.6985 29.0816 10.9184 20.3015 0 20C10.9184 19.6985 19.6985 10.9184 20 0Z"
+                            fill="#FEFEFE" />
+                    </svg>
+                </li>
+                <li class="d-flex align-items-center gap-4">
+                    <h1 class="h5 neutral-0 mb-0 text-nowrap">Brand Strategy</h1>
+                    <svg class="scroll-rotate" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                        viewBox="0 0 40 40" fill="none">
+                        <path
+                            d="M20 0C20.3015 10.9184 29.0816 19.6985 40 20C29.0816 20.3015 20.3015 29.0816 20 40C19.6985 29.0816 10.9184 20.3015 0 20C10.9184 19.6985 19.6985 10.9184 20 0Z"
+                            fill="#FEFEFE" />
+                    </svg>
+                </li>
+                <li class="d-flex align-items-center gap-4">
+                    <h1 class="h5 neutral-0 mb-0 text-nowrap">Rebranding</h1>
+                    <svg class="scroll-rotate" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                        viewBox="0 0 40 40" fill="none">
+                        <path
+                            d="M20 0C20.3015 10.9184 29.0816 19.6985 40 20C29.0816 20.3015 20.3015 29.0816 20 40C19.6985 29.0816 10.9184 20.3015 0 20C10.9184 19.6985 19.6985 10.9184 20 0Z"
+                            fill="#FEFEFE" />
+                    </svg>
+                </li>
+                <li class="d-flex align-items-center gap-4">
+                    <h1 class="h5 neutral-0 mb-0 text-nowrap">Positioning & Storytelling</h1>
+                    <svg class="scroll-rotate" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                        viewBox="0 0 40 40" fill="none">
+                        <path
+                            d="M20 0C20.3015 10.9184 29.0816 19.6985 40 20C29.0816 20.3015 20.3015 29.0816 20 40C19.6985 29.0816 10.9184 20.3015 0 20C10.9184 19.6985 19.6985 10.9184 20 0Z"
+                            fill="#FEFEFE" />
+                    </svg>
+                </li>
+                <li class="d-flex align-items-center gap-4">
+                    <h1 class="h5 neutral-0 mb-0 text-nowrap">Corporate Communications</h1>
+                    <svg class="scroll-rotate" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                        viewBox="0 0 40 40" fill="none">
+                        <path
+                            d="M20 0C20.3015 10.9184 29.0816 19.6985 40 20C29.0816 20.3015 20.3015 29.0816 20 40C19.6985 29.0816 10.9184 20.3015 0 20C10.9184 19.6985 19.6985 10.9184 20 0Z"
+                            fill="#FEFEFE" />
+                    </svg>
+                </li>
+                <li class="d-flex align-items-center gap-4">
+                    <h1 class="h5 neutral-0 mb-0 text-nowrap">Strategic Partnership Development</h1>
+                    <svg class="scroll-rotate" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                        viewBox="0 0 40 40" fill="none">
+                        <path
+                            d="M20 0C20.3015 10.9184 29.0816 19.6985 40 20C29.0816 20.3015 20.3015 29.0816 20 40C19.6985 29.0816 10.9184 20.3015 0 20C10.9184 19.6985 19.6985 10.9184 20 0Z"
+                            fill="#FEFEFE" />
+                    </svg>
+                </li>
+                <li class="d-flex align-items-center gap-4">
+                    <h1 class="h5 neutral-0 mb-0 text-nowrap">Reputation Management</h1>
+                    <svg class="scroll-rotate" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                        viewBox="0 0 40 40" fill="none">
+                        <path
+                            d="M20 0C20.3015 10.9184 29.0816 19.6985 40 20C29.0816 20.3015 20.3015 29.0816 20 40C19.6985 29.0816 10.9184 20.3015 0 20C10.9184 19.6985 19.6985 10.9184 20 0Z"
+                            fill="#FEFEFE" />
+                    </svg>
+                </li>
+                <li class="d-flex align-items-center gap-4">
+                    <h1 class="h5 neutral-0 mb-0 text-nowrap">Brand identity</h1>
+                    <svg class="scroll-rotate" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                        viewBox="0 0 40 40" fill="none">
+                        <path
+                            d="M20 0C20.3015 10.9184 29.0816 19.6985 40 20C29.0816 20.3015 20.3015 29.0816 20 40C19.6985 29.0816 10.9184 20.3015 0 20C10.9184 19.6985 19.6985 10.9184 20 0Z"
+                            fill="#FEFEFE" />
+                    </svg>
+                </li>
+                <li class="d-flex align-items-center gap-4">
+                    <h1 class="h5 neutral-0 mb-0 text-nowrap">Product Launches</h1>
+                    <svg class="scroll-rotate" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                        viewBox="0 0 40 40" fill="none">
+                        <path
+                            d="M20 0C20.3015 10.9184 29.0816 19.6985 40 20C29.0816 20.3015 20.3015 29.0816 20 40C19.6985 29.0816 10.9184 20.3015 0 20C10.9184 19.6985 19.6985 10.9184 20 0Z"
+                            fill="#FEFEFE" />
+                    </svg>
+                </li>
+                <li class="d-flex align-items-center gap-4">
+                    <h1 class="h5 neutral-0 mb-0 text-nowrap">Campaign Communications</h1>
+                    <svg class="scroll-rotate" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                        viewBox="0 0 40 40" fill="none">
+                        <path
+                            d="M20 0C20.3015 10.9184 29.0816 19.6985 40 20C29.0816 20.3015 20.3015 29.0816 20 40C19.6985 29.0816 10.9184 20.3015 0 20C10.9184 19.6985 19.6985 10.9184 20 0Z"
+                            fill="#FEFEFE" />
+                    </svg>
+                </li>
 
-    <!-- Service Section End -->
-    {{-- Services Preview --}}
-    {{-- @if ($services->isNotEmpty())
-        <section class="py-24 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">What We Do</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    @foreach ($services as $service)
-                        <div class="p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition group">
-                            @if ($service->icon)
-                                <div class="text-3xl mb-4">{{ $service->icon }}</div>
-                            @endif
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition">
-                                {{ $service->title }}
-                            </h3>
-                            <p class="text-gray-500">{{ $service->excerpt }}</p>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </section>
-    @endif --}}
-
-    {{-- Featured Portfolio --}}
-    {{-- @if ($projects->isNotEmpty())
-        <section class="py-24 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Featured Work</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    @foreach ($projects as $project)
-                        <a href="{{ route('creative.portfolio.show', $project->slug) }}"
-                            class="group rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition">
-                            @if ($project->getFirstMediaUrl('featured_image'))
-                                <img src="{{ $project->getFirstMediaUrl('featured_image') }}" alt="{{ $project->title }}"
-                                    class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
-                            @else
-                                <div
-                                    class="w-full h-56 bg-gradient-to-br from-purple-100 to-blue-100 flex items-center justify-center">
-                                    <span class="text-4xl">🎨</span>
-                                </div>
-                            @endif
-                            <div class="p-6">
-                                <span
-                                    class="text-xs font-medium text-purple-600 uppercase tracking-wider">{{ $project->category }}</span>
-                                <h3 class="text-lg font-bold text-gray-900 mt-1">{{ $project->title }}</h3>
-                            </div>
-                        </a>
-                    @endforeach
-                </div>
-            </div>
-        </section>
-    @endif --}}
-
-    {{-- Testimonials --}}
-    {{-- @if ($testimonials->isNotEmpty())
-        <section class="py-24 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Client Love</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    @foreach ($testimonials as $testimonial)
-                        <div class="p-8 rounded-2xl bg-gray-50">
-                            <div class="flex mb-4">
-                                @for ($i = 0; $i < $testimonial->rating; $i++)
-                                    <span class="text-yellow-400">★</span>
-                                @endfor
-                            </div>
-                            <p class="text-gray-600 mb-6 italic">"{{ $testimonial->content }}"</p>
-                            <div>
-                                <p class="font-semibold text-gray-900">{{ $testimonial->author_name }}</p>
-                                @if ($testimonial->author_title)
-                                    <p class="text-sm text-gray-500">
-                                        {{ $testimonial->author_title }}@if ($testimonial->author_company)
-                                            , {{ $testimonial->author_company }}
-                                        @endif
-                                    </p>
-                                @endif
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </section>
-    @endif --}}
+            </ul>
+        </div>
+    </div>
 @endsection

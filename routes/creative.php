@@ -19,13 +19,15 @@ Route::domain(config('cms.domains.creative'))->group(function () {
 
     Route::get('/', [CreativeHomeController::class, 'index'])->name('creative.home');
 
+    Route::get('/about', [CreativeHomeController::class, 'about'])->name('creative.about');
+
     // Services
     Route::get('/services', [ServiceController::class, 'index'])->name('creative.services.index');
     Route::get('/services/{slug}', [ServiceController::class, 'show'])->name('creative.services.show');
 
     // Portfolio
-    Route::get('/portfolio', [PortfolioController::class, 'index'])->name('creative.portfolio.index');
-    Route::get('/portfolio/{slug}', [PortfolioController::class, 'show'])->name('creative.portfolio.show');
+    Route::get('/projects', [PortfolioController::class, 'index'])->name('creative.projects.index');
+    Route::get('/projects/{slug}', [PortfolioController::class, 'show'])->name('creative.projects.show');
 
     // Contact
     Route::get('/contact', [ContactController::class, 'show'])->name('creative.contact.show');

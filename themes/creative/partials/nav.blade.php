@@ -1,125 +1,300 @@
- <div class="navbar-area style-three position-relative" id="navbar">
-     <div class="container-fluid">
-         <div class="navbar-wrapper d-flex justify-content-between align-items-center">
-             <a href="index.html" class="navbar-brand">
-                 <img src="assets/img/logo-white.png" alt="Logo">
-             </a>
-             <div class="menu-area me-auto">
-                 <div class="overlay"></div>
-                 <nav class="menu">
-                     <div class="menu-mobile-header">
-                         <button type="button" class="menu-mobile-arrow bg-transparent border-0"><i
-                                 class="ri-arrow-left-s-line"></i></button>
-                         <div class="menu-mobile-title"></div>
-                         <button type="button" class="menu-mobile-close bg-transparent border-0"><i
-                                 class="ri-close-line"></i></button>
-                     </div>
-                     <ul class="menu-section p-0 mb-0 lh-1">
-                         <li class="menu-item-has-children">
-                             <a href="{{ route('creative.home') }}" class="active">Home</a>
-                         </li>
-                         <li class="menu-item-has-children">
-                             <a href="javascript:void(0)">About Us</a>
-                         </li>
-                         <li class="menu-item-has-children">
-                             <a href="javascript:void(0)">Work</a>
-                         </li>
-                         <li class="menu-item-has-children">
-                             <a href="javascript:void(0)">Blog<i class="ri-add-line"></i></a>
-                             <ul class="menu-subs menu-column-1">
-                                 <li class="menu-item-has-children"><a href="javascript:void(0)">Blog Layout<i
-                                             class="ri-add-line"></i></a>
-                                     <ul class="menu-subs menu-column-1">
-                                         <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                         <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                         <li><a href="blog-grid.html">Blog Grid</a></li>
-                                     </ul>
-                                 </li>
-                                 <li class="menu-item-has-children"><a href="javascript:void(0)">Blog Details Layout<i
-                                             class="ri-add-line"></i></a>
-                                     <ul class="menu-subs menu-column-1">
-                                         <li><a href="blog-details-left-sidebar.html">Blog Details Left Sidebar</a></li>
-                                         <li><a href="blog-details-right-sidebar.html">Blog Details Right Sidebar</a>
-                                         </li>
-                                         <li><a href="blog-details-no-sidebar.html">Blog Details No Sidebar</a></li>
-                                     </ul>
-                                 </li>
-                                 <li class="menu-item-has-children"><a href="javascript:void(0)">Others<i
-                                             class="ri-add-line"></i></a>
-                                     <ul class="menu-subs menu-column-1">
-                                         <li><a href="posts-by-author.html">Posts By Author</a></li>
-                                         <li><a href="posts-by-date.html">Posts By Date</a></li>
-                                         <li><a href="posts-by-category.html">Posts By Category</a></li>
-                                         <li><a href="posts-by-tag.html">Posts By Tag</a></li>
-                                     </ul>
-                                 </li>
-                             </ul>
-                         </li>
-                         <li><a href="{{ route('creative.contact.show') }}">Contact Us</a></li>
-                     </ul>
-                 </nav>
-             </div>
-             <div class="other-options d-flex flex-wrap align-items-center justify-content-end">
-                 <div class="option-item d-flex flex-wrap align-items-center">
-                     <div class="mobile-options position-relative d-lg-none">
-                         <button class="dropdown-toggle  text-center bg-transparent border-0 p-0 transition"
-                             type="button" data-bs-toggle="dropdown" aria-expanded="true">
-                             <i class="ri-more-fill"></i>
-                         </button>
-                         <div class="dropdown-menu dropdown-menu-centered mobile-option-list top-1 border-0"
-                             data-bs-popper="static">
-                             <div class="dropdown-item">
-                                 <div
-                                     class="contact-link d-flex flex-wrap align-items-center position-relative transition">
-                                     <span
-                                         class="contact-icon d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img
-                                             src="assets/img/icons/phone.svg" alt="Icon" class="transition"></span>
-                                     <div>
-                                         <span class="text-white d-block">Call Us:</span>
-                                         <span class="text_primary fw-semibold">+6857 886 960</span>
-                                     </div>
-                                     <a href="tel:6857886960" class="position-absolute top-0 start-0 w-100 h-100"></a>
-                                 </div>
-                             </div>
-                             <div class="dropdown-item">
-                                 <a href="contact.html"
-                                     class="btn style-two d-inline-flex flex-wrap align-items-center p-0"><span
-                                         class="btn-text d-inline-block fw-semibold position-relative transition">Get
-                                         In Touch</span><span
-                                         class="btn-icon position-relative d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img
-                                             src="assets/img/icons/up-right-arrow-black.svg" alt="Image"></span></a>
-                             </div>
-                         </div>
-                     </div>
-                     <div
-                         class="contact-link d-lg-flex flex-wrap align-items-center position-relative d-none transition">
-                         <span
-                             class="contact-icon d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img
-                                 src="assets/img/icons/phone.svg" alt="Icon" class="transition"></span>
-                         <div class="d-xl-inline d-none">
-                             <span class="text-white d-block fw-semibold">Call Us:</span>
-                             <span class="text_primary fw-semibold">+6857 886 960</span>
-                         </div>
-                         <a href="tel:6857886960" class="position-absolute top-0 start-0 w-100 h-100"></a>
-                     </div>
-                 </div>
-                 <div class="option-item d-lg-block d-none">
-                     <a href="contact.html" class="btn style-two d-inline-flex flex-wrap align-items-center p-0"><span
-                             class="btn-text d-inline-block fw-semibold position-relative transition">Get In
-                             Touch</span><span
-                             class="btn-icon position-relative d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img
-                                 src="assets/img/icons/up-right-arrow-black.svg" alt="Image"></span></a>
-                 </div>
-                 <div class="option-item d-lg-none">
-                     <button type="button" class="menu-mobile-trigger">
-                         <span></span>
-                         <span></span>
-                         <span></span>
-                         <span></span>
-                     </button>
-                 </div>
-             </div>
-         </div>
-     </div>
- </div>
- <!-- Navbar End -->
+<header>
+
+    <!-- header 3 area start -->
+    <div class="at-header-area at-header-spacing header-transparent">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-1 col-6">
+                    <div class="at-header-logo">
+                        <a href="{{ route('creative.home') }}">
+                            <img style="width: 150px; height: 80px;"
+                                src="{{ asset('assets/imgs/template/logo/clarivox.svg') }}" alt="Clarivox">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-7 me-auto d-none d-xl-block">
+                    <div class="at-main-menu d-inline-flex justify-content-center">
+                        <nav class="at-mobile-menu-active">
+                            <ul>
+                                <li class="">
+                                    <a href="{{ route('creative.home') }}">Home</a>
+                                </li>
+                                <li class="">
+                                    <a href="{{ route('creative.about') }}">About Us</a>
+                                </li>
+                                <li class="">
+                                    <a href="{{ route('creative.services.index') }}">Services</a>
+                                </li>
+                                <li class="">
+                                    <a href="{{ route('news.home') }}" target="_blank">News</a>
+                                </li>
+                                <li class="">
+                                    <a href="{{ route('creative.contact.show') }}">Contact Us</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-6">
+                    <div class="at-header-right gap-3 d-flex justify-content-end align-items-center">
+                        <div class="dark-light-mode">
+                            <label for="switch" class="toggle dark-light-switcher">
+                                <input type="checkbox" class="input" id="switch">
+                                <span class="icon icon--moon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        viewBox="0 0 16 16" fill="none">
+                                        <path
+                                            d="M7.51166 0C6.33857 1.09609 5.6053 2.65694 5.6053 4.38904C5.6053 7.70586 8.29416 10.3947 11.611 10.3947C13.3431 10.3947 14.9039 9.66146 16 8.48836C15.7439 12.6798 12.2635 16 8.00757 16C3.58511 16 0 12.4149 0 7.99245C0 3.73655 3.32017 0.256105 7.51166 0Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                </span>
+                                <span class="icon icon--sun">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        width="28" height="28">
+                                        <path
+                                            d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </label>
+                        </div>
+                        <button class="at-menu-bar at-header-sidebar-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                fill="none">
+                                <path
+                                    d="M1 2C1 1.73478 1.10536 1.48043 1.29289 1.29289C1.48043 1.10536 1.73478 1 2 1H6C6.26522 1 6.51957 1.10536 6.70711 1.29289C6.89464 1.48043 7 1.73478 7 2V6C7 6.26522 6.89464 6.51957 6.70711 6.70711C6.51957 6.89464 6.26522 7 6 7H2C1.73478 7 1.48043 6.89464 1.29289 6.70711C1.10536 6.51957 1 6.26522 1 6V2ZM11 2C11 1.73478 11.1054 1.48043 11.2929 1.29289C11.4804 1.10536 11.7348 1 12 1H16C16.2652 1 16.5196 1.10536 16.7071 1.29289C16.8946 1.48043 17 1.73478 17 2V6C17 6.26522 16.8946 6.51957 16.7071 6.70711C16.5196 6.89464 16.2652 7 16 7H12C11.7348 7 11.4804 6.89464 11.2929 6.70711C11.1054 6.51957 11 6.26522 11 6V2ZM1 12C1 11.7348 1.10536 11.4804 1.29289 11.2929C1.48043 11.1054 1.73478 11 2 11H6C6.26522 11 6.51957 11.1054 6.70711 11.2929C6.89464 11.4804 7 11.7348 7 12V16C7 16.2652 6.89464 16.5196 6.70711 16.7071C6.51957 16.8946 6.26522 17 6 17H2C1.73478 17 1.48043 16.8946 1.29289 16.7071C1.10536 16.5196 1 16.2652 1 16V12ZM11 12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11H16C16.2652 11 16.5196 11.1054 16.7071 11.2929C16.8946 11.4804 17 11.7348 17 12V16C17 16.2652 16.8946 16.5196 16.7071 16.7071C16.5196 16.8946 16.2652 17 16 17H12C11.7348 17 11.4804 16.8946 11.2929 16.7071C11.1054 16.5196 11 16.2652 11 16V12Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header area end -->
+
+    <!-- sticky-menu-area -->
+    <button id="header-sticky" class="hamburger-open-btn hamburger-sticky-menu">
+        <span>MENU</span>
+        <span class="icon">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                    d="M4 5C4 4.73478 4.10536 4.48043 4.29289 4.29289C4.48043 4.10536 4.73478 4 5 4H9C9.26522 4 9.51957 4.10536 9.70711 4.29289C9.89464 4.48043 10 4.73478 10 5V9C10 9.26522 9.89464 9.51957 9.70711 9.70711C9.51957 9.89464 9.26522 10 9 10H5C4.73478 10 4.48043 9.89464 4.29289 9.70711C4.10536 9.51957 4 9.26522 4 9V5ZM14 5C14 4.73478 14.1054 4.48043 14.2929 4.29289C14.4804 4.10536 14.7348 4 15 4H19C19.2652 4 19.5196 4.10536 19.7071 4.29289C19.8946 4.48043 20 4.73478 20 5V9C20 9.26522 19.8946 9.51957 19.7071 9.70711C19.5196 9.89464 19.2652 10 19 10H15C14.7348 10 14.4804 9.89464 14.2929 9.70711C14.1054 9.51957 14 9.26522 14 9V5ZM4 15C4 14.7348 4.10536 14.4804 4.29289 14.2929C4.48043 14.1054 4.73478 14 5 14H9C9.26522 14 9.51957 14.1054 9.70711 14.2929C9.89464 14.4804 10 14.7348 10 15V19C10 19.2652 9.89464 19.5196 9.70711 19.7071C9.51957 19.8946 9.26522 20 9 20H5C4.73478 20 4.48043 19.8946 4.29289 19.7071C4.10536 19.5196 4 19.2652 4 19V15ZM14 15C14 14.7348 14.1054 14.4804 14.2929 14.2929C14.4804 14.1054 14.7348 14 15 14H19C19.2652 14 19.5196 14.1054 19.7071 14.2929C19.8946 14.4804 20 14.7348 20 15V19C20 19.2652 19.8946 19.5196 19.7071 19.7071C19.5196 19.8946 19.2652 20 19 20H15C14.7348 20 14.4804 19.8946 14.2929 19.7071C14.1054 19.5196 14 19.2652 14 19V15Z"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </span>
+    </button>
+    <!-- sticky-menu-end -->
+    <!-- sticky-menu-area -->
+    <button id="header-sticky" class="hamburger-open-btn hamburger-sticky-menu">
+        <span>MENU</span>
+        <span class="icon">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                    d="M4 5C4 4.73478 4.10536 4.48043 4.29289 4.29289C4.48043 4.10536 4.73478 4 5 4H9C9.26522 4 9.51957 4.10536 9.70711 4.29289C9.89464 4.48043 10 4.73478 10 5V9C10 9.26522 9.89464 9.51957 9.70711 9.70711C9.51957 9.89464 9.26522 10 9 10H5C4.73478 10 4.48043 9.89464 4.29289 9.70711C4.10536 9.51957 4 9.26522 4 9V5ZM14 5C14 4.73478 14.1054 4.48043 14.2929 4.29289C14.4804 4.10536 14.7348 4 15 4H19C19.2652 4 19.5196 4.10536 19.7071 4.29289C19.8946 4.48043 20 4.73478 20 5V9C20 9.26522 19.8946 9.51957 19.7071 9.70711C19.5196 9.89464 19.2652 10 19 10H15C14.7348 10 14.4804 9.89464 14.2929 9.70711C14.1054 9.51957 14 9.26522 14 9V5ZM4 15C4 14.7348 4.10536 14.4804 4.29289 14.2929C4.48043 14.1054 4.73478 14 5 14H9C9.26522 14 9.51957 14.1054 9.70711 14.2929C9.89464 14.4804 10 14.7348 10 15V19C10 19.2652 9.89464 19.5196 9.70711 19.7071C9.51957 19.8946 9.26522 20 9 20H5C4.73478 20 4.48043 19.8946 4.29289 19.7071C4.10536 19.5196 4 19.2652 4 19V15ZM14 15C14 14.7348 14.1054 14.4804 14.2929 14.2929C14.4804 14.1054 14.7348 14 15 14H19C19.2652 14 19.5196 14.1054 19.7071 14.2929C19.8946 14.4804 20 14.7348 20 15V19C20 19.2652 19.8946 19.5196 19.7071 19.7071C19.5196 19.8946 19.2652 20 19 20H15C14.7348 20 14.4804 19.8946 14.2929 19.7071C14.1054 19.5196 14 19.2652 14 19V15Z"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </span>
+    </button>
+    <!-- sticky-menu-end -->
+</header>
+<div class="at-offcanvas-area">
+    <div class="at-offcanvas">
+        <div class="at-offcanvas-top d-flex align-items-center justify-content-between">
+            <div class="at-offcanvas-logo">
+                <a href="https://orisa-html-demo.pages.dev/index.html">
+                    <img style="width: 150px; height: 80px;" src="{{ asset('assets/imgs/template/logo/clarivox.svg') }}"
+                        alt="Clarivox">
+                </a>
+            </div>
+            <div class="at-offcanvas-close-btn">
+                <button class="close-btn">
+                    <svg width="37" height="38" viewBox="0 0 37 38" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.19141 9.80762L27.5762 28.1924" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M9.19141 28.1924L27.5762 9.80761" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="at-offcanvas-content d-none d-xl-block">
+            <h3 class="at-offcanvas-title">Howdy!</h3>
+            <p class="fz-font-lg">We blend strategy, creativity, and technology to help brands grow, connect, and stand
+                out in an ever-evolving digital world. </p>
+        </div>
+        <div class="at-offcanvas-menu d-xl-none pb-50">
+            <nav></nav>
+        </div>
+        <div class="at-offcanvas-gallery d-none d-xl-block">
+            <div class="sec-2-home-5__avatars-row d-flex gap-2">
+                <div class="sec-2-home-5__avatar-sm at-offcanvas-gallery-img">
+                    <img class="img-cover" src="assets/imgs/template/avatar/avatar-10.webp" alt="orisa">
+                </div>
+                <div class="sec-2-home-5__avatar-sm at-offcanvas-gallery-img">
+                    <img class="img-cover" src="assets/imgs/template/avatar/avatar-11.webp" alt="orisa">
+                </div>
+                <div class="sec-2-home-5__avatar-sm at-offcanvas-gallery-img">
+                    <img class="img-cover" src="assets/imgs/template/avatar/avatar-12.webp" alt="orisa">
+                </div>
+                <div class="sec-2-home-5__avatar-sm at-offcanvas-gallery-img">
+                    <img class="img-cover" src="assets/imgs/template/avatar/avatar-13.webp" alt="orisa">
+                </div>
+                <div class="sec-2-home-5__avatar-sm at-offcanvas-gallery-img">
+                    <img class="img-cover" src="assets/imgs/template/avatar/avatar-14.webp" alt="orisa">
+                </div>
+            </div>
+        </div>
+        <div class="at-offcanvas-contact">
+            <h4 class="h5 at-offcanvas-title sm">Get in touch</h4>
+            <ul>
+                <li><a class="fz-font-lg" href="tel:2125557398">(212) 555-7398</a></li>
+                <li><a class="fz-font-lg" href="mailto:hello@aleric.com">hello@orisa.com</a></li>
+                <li>
+                    <a class="fz-font-lg" href="index-3_2.htm#">
+                        245 Fifth Avenue, Suite 1800 <br>
+                        New York, NY 10016, USA
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="at-offcanvas-social">
+            <h3 class="at-offcanvas-title sm">Follow Us</h3>
+            <ul class="at-offcanvas-social__grid">
+                <li>
+                    <a href="index-3_2.htm#" class="at-offcanvas-social__link" aria-label="Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 15"
+                            fill="none" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0 0H5.25L8.98421 5.21053L13.5 0H15.5L9.8895 6.47368L16 15H10.75L7.01579 9.7895L2.5 15H0.5L6.11053 8.52632L0 0ZM11.5204 13.5L2.92043 1.5H4.47957L13.0796 13.5H11.5204Z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>Twitter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index-3_2.htm#" class="at-offcanvas-social__link" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                            fill="none" aria-hidden="true">
+                            <path
+                                d="M12.4024 18V11.0344H14.7347L15.0838 8.3265H12.4024V6.59765C12.4024 5.81364 12.62 5.27934 13.7443 5.27934L15.1783 5.27867V2.85676C14.9302 2.82382 14.0791 2.75006 13.0888 2.75006C11.0213 2.75006 9.606 4.01198 9.606 6.32952V8.3265H7.2677V11.0344H9.606V18H1C0.44772 18 0 17.5523 0 17V1C0 0.44772 0.44772 0 1 0H17C17.5523 0 18 0.44772 18 1V17C18 17.5523 17.5523 18 17 18H12.4024Z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>Facebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index-3_2.htm#" class="at-offcanvas-social__link" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                            fill="none" aria-hidden="true">
+                            <path
+                                d="M15.3352 15.339H12.6697V11.1622C12.6697 10.1662 12.6495 8.8845 11.2807 8.8845C9.89102 8.8845 9.67872 9.9683 9.67872 11.0887V15.339H7.01322V6.75H9.57372V7.9207H9.60822C9.96602 7.2457 10.836 6.53325 12.1357 6.53325C14.8365 6.53325 15.336 8.3108 15.336 10.6245L15.3352 15.339ZM4.00275 5.57475C3.14475 5.57475 2.4555 4.88025 2.4555 4.026C2.4555 3.1725 3.1455 2.47875 4.00275 2.47875C4.85775 2.47875 5.55075 3.1725 5.55075 4.026C5.55075 4.88025 4.857 5.57475 4.00275 5.57475ZM5.33925 15.339H2.66625V6.75H5.33925V15.339ZM16.6687 0H1.32825C0.594 0 0 0.5805 0 1.29675V16.7033C0 17.4202 0.594 18 1.32825 18H16.6665C17.4 18 18 17.4202 18 16.7033V1.29675C18 0.5805 17.4 0 16.6665 0H16.6687Z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>Linkedin</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index-3_2.htm#" class="at-offcanvas-social__link" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                            fill="none" aria-hidden="true">
+                            <path
+                                d="M9.92475 0C10.9376 0.00167406 11.4509 0.00703828 11.8945 0.0202418L12.0692 0.025948C12.2709 0.0331213 12.47 0.0421215 12.7101 0.0533719C13.6678 0.0976265 14.3211 0.249129 14.8949 0.471887C15.4881 0.700648 15.9892 1.00966 16.4894 1.50993C16.9889 2.0102 17.298 2.51271 17.5275 3.10448C17.7494 3.67751 17.901 4.33153 17.946 5.28931C17.9567 5.52933 17.9653 5.72841 17.9725 5.93024L17.9781 6.10492C17.9913 6.5484 17.9973 7.06177 17.9992 8.07471L17.9999 8.74577C18 8.82777 18 8.91237 18 8.99967L17.9999 9.25357L17.9994 9.92472C17.9977 10.9376 17.9923 11.451 17.9791 11.8944L17.9734 12.0691C17.9662 12.271 17.9572 12.4701 17.946 12.7101C17.9017 13.6679 17.7494 14.3211 17.5275 14.8949C17.2987 15.4882 16.9889 15.9892 16.4894 16.4895C15.9892 16.989 15.4859 17.298 14.8949 17.5275C14.3211 17.7495 13.6678 17.901 12.7101 17.946C12.47 17.9567 12.2709 17.9654 12.0692 17.9725L11.8945 17.9781C11.4509 17.9914 10.9376 17.9973 9.92475 17.9993L9.25359 18C9.1716 18 9.087 18 8.99969 18H8.7458L8.07464 17.9994C7.06175 17.9977 6.54839 17.9924 6.1049 17.9791L5.93022 17.9734C5.72839 17.9662 5.5293 17.9572 5.2893 17.946C4.33151 17.9018 3.67899 17.7495 3.10448 17.5275C2.51195 17.2988 2.01018 16.989 1.50992 16.4895C1.00965 15.9892 0.701394 15.4859 0.471886 14.8949C0.249129 14.3211 0.0983735 13.6679 0.053372 12.7101C0.0426796 12.4701 0.0339582 12.271 0.026893 12.0691L0.0212318 11.8944C0.00806435 11.451 0.00206123 10.9376 0.000117163 9.92472L0 8.07471C0.00167406 7.06177 0.00702925 6.5484 0.0202327 6.10492L0.0259479 5.93024C0.0331212 5.72841 0.0421216 5.52933 0.053372 5.28931C0.0976175 4.33078 0.249129 3.67825 0.471886 3.10448C0.700638 2.51196 1.00965 2.0102 1.50992 1.50993C2.01018 1.00966 2.51271 0.701396 3.10448 0.471887C3.67825 0.249129 4.33077 0.0983735 5.2893 0.0533719C5.5293 0.0426885 5.72839 0.0339673 5.93022 0.026902L6.1049 0.0212407C6.54839 0.00806417 7.06175 0.00206102 8.07464 0.000116949L9.92475 0ZM8.99969 4.49953C6.51298 4.49953 4.49952 6.51518 4.49952 8.99967C4.49952 11.4864 6.51517 13.4998 8.99969 13.4998C11.4864 13.4998 13.4998 11.4842 13.4998 8.99967C13.4998 6.513 11.4841 4.49953 8.99969 4.49953ZM8.99969 6.2996C10.491 6.2996 11.6998 7.50805 11.6998 8.99967C11.6998 10.4909 10.4913 11.6998 8.99969 11.6998C7.50843 11.6998 6.29958 10.4914 6.29958 8.99967C6.29958 7.50841 7.50798 6.2996 8.99969 6.2996ZM13.7249 3.14949C13.1045 3.14949 12.5998 3.65342 12.5998 4.27376C12.5998 4.89411 13.1037 5.39882 13.7249 5.39882C14.3452 5.39882 14.8499 4.89489 14.8499 4.27376C14.8499 3.65342 14.3443 3.14871 13.7249 3.14949Z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>Instagram</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index-3_2.htm#" class="at-offcanvas-social__link" aria-label="Youtube">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13"
+                            fill="none" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.0322 0.388283C16.8071 0.602295 17.4162 1.23059 17.6237 2.03009C17.9985 3.47775 18 6.49997 18 6.49997C18 6.49997 18 9.52214 17.6237 10.9698C17.4162 11.7694 16.8071 12.3977 16.0322 12.6116C14.6291 13 8.99997 13 8.99997 13C8.99997 13 3.37092 13 1.96772 12.6116C1.1928 12.3977 0.583804 11.7694 0.376354 10.9698C-3.83173e-08 9.52214 0 6.49997 0 6.49997C0 6.49997 -3.83173e-08 3.47775 0.376354 2.03009C0.583804 1.23059 1.1928 0.602295 1.96772 0.388283C3.37092 1.18595e-07 8.99997 0 8.99997 0C8.99997 0 14.6291 1.18595e-07 16.0322 0.388283ZM11.8751 6.50027L7.19879 9.2855V3.71499L11.8751 6.50027Z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>Youtube</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="body-overlay"></div>
+<!-- at-offcanvus-area-end -->
+
+<!-- offcanvas 2 start -->
+<div class="at-offcanvas-2-area">
+    <div class="offcanvas-bg"></div>
+    <div class="at-offcanvas-2-wrapper offcanvas-menu">
+        <div class="at-offcanvas-2-left">
+            <div class="at-header-logo d-flex justify-content-between align-items-center mb-50">
+                <a href="https://orisa-html-demo.pages.dev/index.html">
+                    <img style="width: 150px; height: 80px;"
+                        src="{{ asset('assets/imgs/template/logo/clarivox.svg') }}" alt="Clarivox">
+                </a>
+                <span class="hamburger-close-btn">
+                    <svg width="37" height="38" viewBox="0 0 37 38" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.19141 9.80762L27.5762 28.1924" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M9.19141 28.1924L27.5762 9.80761" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </span>
+            </div>
+            <div class="at-offcanvas-menu counter-row">
+                <nav></nav>
+            </div>
+            <div class="at-offcanvas-social">
+                <ul class="at-offcanvas-social__grid">
+                    <li>
+                        <a href="index-3_2.htm#" class="at-offcanvas-social__link" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                viewBox="0 0 16 15" fill="none" aria-hidden="true">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0 0H5.25L8.98421 5.21053L13.5 0H15.5L9.8895 6.47368L16 15H10.75L7.01579 9.7895L2.5 15H0.5L6.11053 8.52632L0 0ZM11.5204 13.5L2.92043 1.5H4.47957L13.0796 13.5H11.5204Z"
+                                    fill="currentColor" />
+                            </svg>
+                            <span>Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index-3_2.htm#" class="at-offcanvas-social__link" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                                <path
+                                    d="M15.3352 15.339H12.6697V11.1622C12.6697 10.1662 12.6495 8.8845 11.2807 8.8845C9.89102 8.8845 9.67872 9.9683 9.67872 11.0887V15.339H7.01322V6.75H9.57372V7.9207H9.60822C9.96602 7.2457 10.836 6.53325 12.1357 6.53325C14.8365 6.53325 15.336 8.3108 15.336 10.6245L15.3352 15.339ZM4.00275 5.57475C3.14475 5.57475 2.4555 4.88025 2.4555 4.026C2.4555 3.1725 3.1455 2.47875 4.00275 2.47875C4.85775 2.47875 5.55075 3.1725 5.55075 4.026C5.55075 4.88025 4.857 5.57475 4.00275 5.57475ZM5.33925 15.339H2.66625V6.75H5.33925V15.339ZM16.6687 0H1.32825C0.594 0 0 0.5805 0 1.29675V16.7033C0 17.4202 0.594 18 1.32825 18H16.6665C17.4 18 18 17.4202 18 16.7033V1.29675C18 0.5805 17.4 0 16.6665 0H16.6687Z"
+                                    fill="currentColor" />
+                            </svg>
+                            <span>Linkedin</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index-3_2.htm#" class="at-offcanvas-social__link" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                                <path
+                                    d="M9.92475 0C10.9376 0.00167406 11.4509 0.00703828 11.8945 0.0202418L12.0692 0.025948C12.2709 0.0331213 12.47 0.0421215 12.7101 0.0533719C13.6678 0.0976265 14.3211 0.249129 14.8949 0.471887C15.4881 0.700648 15.9892 1.00966 16.4894 1.50993C16.9889 2.0102 17.298 2.51271 17.5275 3.10448C17.7494 3.67751 17.901 4.33153 17.946 5.28931C17.9567 5.52933 17.9653 5.72841 17.9725 5.93024L17.9781 6.10492C17.9913 6.5484 17.9973 7.06177 17.9992 8.07471L17.9999 8.74577C18 8.82777 18 8.91237 18 8.99967L17.9999 9.25357L17.9994 9.92472C17.9977 10.9376 17.9923 11.451 17.9791 11.8944L17.9734 12.0691C17.9662 12.271 17.9572 12.4701 17.946 12.7101C17.9017 13.6679 17.7494 14.3211 17.5275 14.8949C17.2987 15.4882 16.9889 15.9892 16.4894 16.4895C15.9892 16.989 15.4859 17.298 14.8949 17.5275C14.3211 17.7495 13.6678 17.901 12.7101 17.946C12.47 17.9567 12.2709 17.9654 12.0692 17.9725L11.8945 17.9781C11.4509 17.9914 10.9376 17.9973 9.92475 17.9993L9.25359 18C9.1716 18 9.087 18 8.99969 18H8.7458L8.07464 17.9994C7.06175 17.9977 6.54839 17.9924 6.1049 17.9791L5.93022 17.9734C5.72839 17.9662 5.5293 17.9572 5.2893 17.946C4.33151 17.9018 3.67899 17.7495 3.10448 17.5275C2.51195 17.2988 2.01018 16.989 1.50992 16.4895C1.00965 15.9892 0.701394 15.4859 0.471886 14.8949C0.249129 14.3211 0.0983735 13.6679 0.053372 12.7101C0.0426796 12.4701 0.0339582 12.271 0.026893 12.0691L0.0212318 11.8944C0.00806435 11.451 0.00206123 10.9376 0.000117163 9.92472L0 8.07471C0.00167406 7.06177 0.00702925 6.5484 0.0202327 6.10492L0.0259479 5.93024C0.0331212 5.72841 0.0421216 5.52933 0.053372 5.28931C0.0976175 4.33078 0.249129 3.67825 0.471886 3.10448C0.700638 2.51196 1.00965 2.0102 1.50992 1.50993C2.01018 1.00966 2.51271 0.701396 3.10448 0.471887C3.67825 0.249129 4.33077 0.0983735 5.2893 0.0533719C5.5293 0.0426885 5.72839 0.0339673 5.93022 0.026902L6.1049 0.0212407C6.54839 0.00806417 7.06175 0.00206102 8.07464 0.000116949L9.92475 0ZM8.99969 4.49953C6.51298 4.49953 4.49952 6.51518 4.49952 8.99967C4.49952 11.4864 6.51517 13.4998 8.99969 13.4998C11.4864 13.4998 13.4998 11.4842 13.4998 8.99967C13.4998 6.513 11.4841 4.49953 8.99969 4.49953ZM8.99969 6.2996C10.491 6.2996 11.6998 7.50805 11.6998 8.99967C11.6998 10.4909 10.4913 11.6998 8.99969 11.6998C7.50843 11.6998 6.29958 10.4914 6.29958 8.99967C6.29958 7.50841 7.50798 6.2996 8.99969 6.2996ZM13.7249 3.14949C13.1045 3.14949 12.5998 3.65342 12.5998 4.27376C12.5998 4.89411 13.1037 5.39882 13.7249 5.39882C14.3452 5.39882 14.8499 4.89489 14.8499 4.27376C14.8499 3.65342 14.3443 3.14871 13.7249 3.14949Z"
+                                    fill="currentColor" />
+                            </svg>
+                            <span>Instagram</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <span class="hamburger-close-btn hamburger-mobile-close-btn d-md-none">CLOSE</span>
+        </div>
+    </div>
+</div>
+<!-- offcanvas 2 end -->
+<div class="px-blur-bottom"></div>
+<!-- Begin magic cursor -->
+<div id="magic-cursor" class="cursor-black-bg">
+    <div id="ball"></div>
+</div>

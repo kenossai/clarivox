@@ -5,54 +5,42 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>@yield('title', config('app.name'))</title>
 
     {!! app(\App\Services\SeoService::class)->render() !!}
 
     {{-- Styles --}}
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/scrollcue.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/remixicon.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/header.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/dark-theme.css') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/imgs/template/logo/favicon.svg') }}">
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/vendors/carouselTicker.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendors/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendors/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendors/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendors/font-awesome-pro.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendors/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendors/odometer.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendors/spacing.css') }}">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
 
 </head>
 
 <body>
 
-    <!--  Preloader Start -->
-    {{-- <div class="preloader-area" id="preloader">
-        <div class="spinner">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div> --}}
-    <!--  Preloader End -->
+    @include('creative::partials.nav')
 
-    <!-- Theme Switcher Start -->
-    <div class="switch-theme-mode">
-        <label id="switch" class="switch">
-            <input type="checkbox" onchange="toggleTheme()" id="slider">
-            <span class="slider round"></span>
-        </label>
+    {{-- Page Content --}}
+    <div class="px-blur-bottom"></div>
+    <!-- Begin magic cursor -->
+    <div id="magic-cursor" class="cursor-black-bg">
+        <div id="ball"></div>
     </div>
-    <!-- Theme Switcher End -->
-
-    <!-- Custom Cursor -->
-    <div class="cursor"><span class="cursor-text"></span></div>
-    <div class="cursor-inner"></div>
+    <!-- End magic cursor -->
     <div id="smooth-wrapper">
         <div id="smooth-content">
-            @include('creative::partials.nav')
-
-            {{-- Page Content --}}
-            <main>
+            <main >
                 @yield('content')
             </main>
 
@@ -61,17 +49,23 @@
         </div>
     </div>
     {{-- Scripts --}}
-    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/js/megamenu.js') }}"></script>
-    <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/js/fslightbox.js') }}"></script>
-    <script src="{{ asset('assets/js/gsap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/scrollTrigger.min.js') }}"></script>
-    <script src="{{ asset('assets/js/lenis.min.js') }}"></script>
-    <script src="{{ asset('assets/js/scrollToPlugin.js') }}"></script>
-    <script src="{{ asset('assets/js/SplitText.min.js') }}"></script>
-    <script src="{{ asset('assets/js/customEase.js') }}"></script>
-    <script src="{{ asset('assets/js/scrollcue.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendors/color-modes.js') }}"></script>
+    <script src="{{ asset('assets/js/vendors/jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendors/plugin.js') }}"></script>
+    <script src="{{ asset('assets/js/vendors/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendors/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendors/jquery.carouselTicker.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendors/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendors/jquery.odometer.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendors/jquery.appear.js') }}"></script>
+    <script src="{{ asset('assets/js/vendors/jquery.elevatezoom.js') }}"></script>
+    <script src="{{ asset('assets/js/vendors/nice-select.js') }}"></script>
+    <script src="{{ asset('assets/js/vendors/parallax.js') }}"></script>
+    <script src="{{ asset('assets/js/vendors/ripple-2.js') }}"></script>
+    <script src="{{ asset('assets/js/vendors/imagesloaded-pkgd.js') }}"></script>
+    <script src="{{ asset('assets/js/vendors/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendors/image-hover-effects.js') }}"></script>
+    <script src="{{ asset('assets/js/at-cursor.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
 

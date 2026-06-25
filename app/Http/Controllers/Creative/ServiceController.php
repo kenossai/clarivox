@@ -20,7 +20,7 @@ class ServiceController extends Controller
       ->orderBy('sort_order')
       ->get();
 
-    return view('creative::services.index', compact('services'));
+    return view('creative::services', compact('services'));
   }
 
   public function show(string $slug, SeoService $seo): View

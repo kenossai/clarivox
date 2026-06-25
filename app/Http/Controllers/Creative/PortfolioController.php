@@ -20,7 +20,7 @@ class PortfolioController extends Controller
       ->orderBy('sort_order')
       ->paginate(12);
 
-    return view('creative::portfolio.index', compact('projects'));
+    return view('creative::projects');
   }
 
   public function show(string $slug, SeoService $seo): View
