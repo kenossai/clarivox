@@ -62,7 +62,7 @@
                         relevance, spark meaningful conversations, and drive impactful change.</p>
                     <div class="d-flex flex-wrap align-items-center gap-4">
                         <div class="at-btn-group at_fade_anim" data-delay=".4" data-fade-from="bottom" data-ease="bounce">
-                            <a class="at-btn-circle" href="https://orisa-html-demo.pages.dev/portfolio-1.html">
+                            <a class="at-btn-circle" href="{{ route('creative.contact.show') }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15"
                                     fill="none">
                                     <path
@@ -70,9 +70,9 @@
                                         fill="currentColor" />
                                 </svg>
                             </a>
-                            <a class="at-btn z-index-1" href="https://orisa-html-demo.pages.dev/portfolio-1.html">Connect
+                            <a class="at-btn z-index-1" href="{{ route('creative.contact.show') }}">Connect
                                 with Us</a>
-                            <a class="at-btn-circle" href="https://orisa-html-demo.pages.dev/portfolio-1.html">
+                            <a class="at-btn-circle" href="{{ route('creative.contact.show') }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15"
                                     fill="none">
                                     <path
@@ -93,7 +93,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 order-3">
                     <div class="p-relative rounded-4 fix cilent-word-wide changeless">
-                        <img class="img-cover" src="{{ asset('assets/imgs/pages/img-55.webp') }}" alt="orisa">
+                        <img class="img-cover" src="{{ asset('assets/imgs/pages/img-55.webp') }}" alt="clarivox">
                     </div>
                 </div>
             </div>
