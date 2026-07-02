@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Creative;
 
 use App\Http\Controllers\Controller;
 use App\Models\PortfolioProject;
+use App\Models\Page;
 use App\Models\Service;
+use App\Models\TeamMember;
 use App\Models\Testimonial;
 use App\Services\SeoService;
 use Illuminate\View\View;
@@ -48,11 +50,22 @@ class HomeController extends Controller
   {
     $site = app('current.site');
 
+    $page = Page::where('site_id', $site->id)
+      ->where('slug', 'about')
+      ->where('status', 'published')
+      ->first();
+
     $seo->fromSite($site)
-      ->title('About Us - ' . $site->name)
-      ->description($site->getSetting('meta_description', 'Learn more about our creative agency.'))
+      ->title(($page?->meta_title ?: 'About Us') . ' - ' . $site->name)
+      ->description($page?->meta_description ?: $site->getSetting('meta_description', 'Learn more about our creative agency.'))
       ->canonical(url('/about'));
 
-    return view('creative::about');
+    $teamMembers = TeamMember::where('site_id', $site->id)
+      ->where('status', 'published')
+      ->orderBy('sort_order')
+      ->take(4)
+      ->get();
+
+    return view('creative::about', compact('page', 'teamMembers'));
   }
 }

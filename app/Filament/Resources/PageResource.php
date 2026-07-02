@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\PageResource\Pages;
 use App\Models\Page;
 use App\Models\Site;
+use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\RichEditor;
 use Filament\Schemas\Components\Section;
 use Filament\Forms\Components\Select;
@@ -59,6 +60,16 @@ class PageResource extends Resource
       Section::make('Content')->schema([
         RichEditor::make('content')->fileAttachmentsDisk('public')->fileAttachmentsDirectory('pages')->columnSpanFull(),
       ]),
+
+      Section::make('Creative Page Fields')->schema([
+        KeyValue::make('hero')
+          ->label('Template fields')
+          ->keyLabel('Field')
+          ->valueLabel('Content')
+          ->helperText('Used by creative templates. About supports: eyebrow, heading, intro, gallery_image_1..4, team_eyebrow, team_heading, team_intro, team_cta_label, team_cta_url, brand_heading, brand_metric_prefix, brand_metric_value, brand_metric_suffix, brand_metric_text, brand_image_left, brand_image_right.')
+          ->nullable()
+          ->columnSpanFull(),
+      ])->collapsible(),
 
       Section::make('SEO')->schema([
         TextInput::make('meta_title')->maxLength(70)->placeholder('Leave empty to use page title'),

@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 
-Route::domain(config('cms.domains.creative'))->group(function () {
+$creativeRoutes = function () {
 
   Route::middleware(['web', 'resolve.site'])->group(function () {
 
@@ -36,4 +36,10 @@ Route::domain(config('cms.domains.creative'))->group(function () {
     // Dynamic CMS pages (must come last)
     Route::get('/{slug}', [PageController::class, 'show'])->name('creative.page.show');
   });
-});
+};
+
+Route::domain(config('cms.domains.creative'))->group($creativeRoutes);
+
+if (app()->environment('local')) {
+  Route::group([], $creativeRoutes);
+}

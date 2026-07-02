@@ -17,6 +17,7 @@ class TeamMember extends Model implements HasMedia
     'name',
     'position',
     'bio',
+    'photo',
     'email',
     'social_links',
     'status',

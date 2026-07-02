@@ -1,6 +1,22 @@
 @extends('creative::layouts.app')
 
-@section('title', 'About Us - ' . config('app.name'))
+@php
+    $field = fn (string $key, mixed $default = null) => data_get($page?->hero ?? [], $key, $default);
+    $assetUrl = function (?string $path, string $fallback): string {
+        $path = $path ?: $fallback;
+
+        return str_starts_with($path, 'http') ? $path : asset($path);
+    };
+    $fallbackTeam = collect([
+        (object) ['name' => 'Darrell Steward', 'position' => 'UI/UX Designer', 'photo' => null],
+        (object) ['name' => 'Amelia Courtney', 'position' => 'Project Manager', 'photo' => null],
+        (object) ['name' => 'Esther Howard', 'position' => 'Software Developer', 'photo' => null],
+        (object) ['name' => 'Jacob Jones', 'position' => 'Marketing CEO', 'photo' => null],
+    ]);
+    $displayTeam = $teamMembers->isNotEmpty() ? $teamMembers : $fallbackTeam;
+@endphp
+
+@section('title', ($page?->meta_title ?: 'About Us') . ' - ' . config('app.name'))
 @section('content')
     <div class="sec-1-about pt-150 overflow-hidden">
         <div class="container pb-100">
@@ -8,8 +24,8 @@
                 <div class="col-12">
                     <span class="at-btn common-black bg-transparent mb-10 rounded-0 p-0">
                         <span class="text-uppercase">
-                            <span class="text-1">About Us</span>
-                            <span class="text-2">About Us</span>
+                            <span class="text-1">{{ $field('eyebrow', 'About Us') }}</span>
+                            <span class="text-2">{{ $field('eyebrow', 'About Us') }}</span>
                         </span>
                         <i>
                             <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
@@ -28,15 +44,10 @@
                     </span>
                 </div>
                 <div class="col-lg-7 h-100">
-                    <h2 class="section-title fw-600 lh-1 reveal-text">We are a creative digital agency shaping meaningful
-                        experiences</h2>
+                    <h2 class="section-title fw-600 lh-1 reveal-text">{{ $field('heading', 'We are a creative digital agency shaping meaningful experiences') }}</h2>
                 </div>
                 <div class="col-lg-5 ms-auto">
-                    <h3 class="h6 mb-4 fw-600">At CLARIVOX Creatives, we tell the stories shaping Africa's future. As a
-                        modern communications and experiential agency, we connect culture with commerce, helping visionary
-                        brands, influential personalities, creative industries, governments, and institutions build
-                        relevance, spark conversations, and expand their influence across borders.
-                    </h3>
+                    <h3 class="h6 mb-4 fw-600">{{ $field('intro', "At CLARIVOX Creatives, we tell the stories shaping Africa's future. As a modern communications and experiential agency, we connect culture with commerce, helping visionary brands, influential personalities, creative industries, governments, and institutions build relevance, spark conversations, and expand their influence across borders.") }}</h3>
 
                 </div>
             </div>
@@ -44,26 +55,18 @@
         <div class="at-item-anime-area">
             <div class="swiper about-me-slider-active">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="about-me-slider-thumb at-item-anime marque">
-                            <img class="w-100 rounded-4" src="assets/imgs/pages/img-117.webp" alt="orisa">
+                    @foreach ([
+                        $field('gallery_image_1', 'assets/imgs/pages/img-117.webp'),
+                        $field('gallery_image_2', 'assets/imgs/pages/img-118.webp'),
+                        $field('gallery_image_3', 'assets/imgs/pages/img-119.webp'),
+                        $field('gallery_image_4', 'assets/imgs/pages/img-120.webp'),
+                    ] as $image)
+                        <div class="swiper-slide">
+                            <div class="about-me-slider-thumb at-item-anime marque">
+                                <img class="w-100 rounded-4" src="{{ $assetUrl($image, 'assets/imgs/pages/img-117.webp') }}" alt="{{ $field('eyebrow', 'About Us') }}">
+                            </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="about-me-slider-thumb at-item-anime marque">
-                            <img class="w-100 rounded-4" src="assets/imgs/pages/img-118.webp" alt="orisa">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="about-me-slider-thumb at-item-anime marque">
-                            <img class="w-100 rounded-4" src="assets/imgs/pages/img-119.webp" alt="orisa">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="about-me-slider-thumb at-item-anime marque">
-                            <img class="w-100 rounded-4" src="assets/imgs/pages/img-120.webp" alt="orisa">
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -104,8 +107,8 @@
                     <div class="col-12">
                         <span class="at-btn common-black bg-transparent mb-10 rounded-0 p-0">
                             <span class="text-uppercase">
-                                <span class="text-1">MEET OUR TEAM</span>
-                                <span class="text-2">MEET OUR TEAM</span>
+                                <span class="text-1">{{ $field('team_eyebrow', 'MEET OUR TEAM') }}</span>
+                                <span class="text-2">{{ $field('team_eyebrow', 'MEET OUR TEAM') }}</span>
                             </span>
                             <i>
                                 <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
@@ -124,14 +127,13 @@
                         </span>
                     </div>
                     <div class="col-lg-5 h-100">
-                        <h1 class="section-title fw-500 fz-ds-1 lh-1 reveal-text">Behind the Visionaries</h1>
+                        <h1 class="section-title fw-500 fz-ds-1 lh-1 reveal-text">{{ $field('team_heading', 'Behind the Visionaries') }}</h1>
                     </div>
 
                     <div class="col-lg-5 ms-auto">
-                        <p class="fz-font-3xl mb-4">Creative experts designing meaningful digital experiences that help
-                            ambitious brands grow faster and lead their markets.</p>
+                        <p class="fz-font-3xl mb-4">{{ $field('team_intro', 'Creative experts designing meaningful digital experiences that help ambitious brands grow faster and lead their markets.') }}</p>
                         <div class="at-btn-group at_fade_anim" data-delay=".4" data-fade-from="bottom" data-ease="bounce">
-                            <a class="at-btn-circle" href="team.html">
+                            <a class="at-btn-circle" href="{{ $field('team_cta_url', route('creative.contact.show')) }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15"
                                     fill="none">
                                     <path
@@ -139,8 +141,8 @@
                                         fill="currentColor" />
                                 </svg>
                             </a>
-                            <a class="at-btn z-index-1" href="team.html">Join our Team</a>
-                            <a class="at-btn-circle" href="team.html">
+                            <a class="at-btn z-index-1" href="{{ $field('team_cta_url', route('creative.contact.show')) }}">{{ $field('team_cta_label', 'Join our Team') }}</a>
+                            <a class="at-btn-circle" href="{{ $field('team_cta_url', route('creative.contact.show')) }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15"
                                     viewBox="0 0 16 15" fill="none">
                                     <path
@@ -152,84 +154,34 @@
                     </div>
                 </div>
                 <div class="row pt-80 g-4">
-                    <!-- beautify ignore:start -->
-                            <div class="col-lg-3 col-md-6 pt-md-5 changeless">
-                <div class="team-card">
-                    <div class="team-card-image">
-                        <div class="anim-zoomin">
-                            <img src="assets/imgs/pages/img-17.webp" alt="Darrell Steward" class="img-cover">
+                    @foreach ($displayTeam as $member)
+                        @php
+                            $fallbackPhoto = 'assets/imgs/pages/img-' . (17 + $loop->index) . '.webp';
+                            $photo = $member->photo
+                                ? (str_starts_with($member->photo, 'http') ? $member->photo : asset('storage/' . $member->photo))
+                                : asset($fallbackPhoto);
+                        @endphp
+                        <div class="col-lg-3 col-md-6 {{ $loop->odd ? 'pt-md-5 ' : '' }}changeless">
+                            <div class="team-card">
+                                <div class="team-card-image">
+                                    <div class="anim-zoomin">
+                                        <img src="{{ $photo }}" alt="{{ $member->name }}" class="img-cover">
+                                    </div>
+                                </div>
+                                <a href="{{ $field('team_cta_url', route('creative.contact.show')) }}" class="team-card-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <path d="M7.85986 2.43872L1.7123 8.58629L0.702148 7.57614L6.84971 1.42857H1.43131V0H9.28843V7.85714H7.85986V2.43872Z" fill="currentColor" />
+                                    </svg>
+                                </a>
+                                <div class="team-card-content">
+                                    <a href="{{ $field('team_cta_url', route('creative.contact.show')) }}" class="team-card-name">
+                                        <h2 class="h6 fz-font-2xl">{{ $member->name }}</h2>
+                                    </a>
+                                    <p class="team-card-position fz-font-sm m-0 common-white">{{ $member->position }}</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <a href="team-details.html" class="team-card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
-                            <path d="M7.85986 2.43872L1.7123 8.58629L0.702148 7.57614L6.84971 1.42857H1.43131V0H9.28843V7.85714H7.85986V2.43872Z" fill="currentColor" />
-                        </svg>
-                    </a>
-                    <div class="team-card-content">
-                        <a href="team-details.html" class="team-card-name">
-                            <h2 class="h6 fz-font-2xl">Darrell Steward</h2>
-                        </a>
-                        <p class="team-card-position fz-font-sm m-0 common-white">UI/UX Designer</p>
-                    </div>
-                </div>
-            </div><div class="col-lg-3 col-md-6 changeless">
-                <div class="team-card">
-                    <div class="team-card-image">
-                        <div class="anim-zoomin">
-                            <img src="assets/imgs/pages/img-18.webp" alt="Amelia Courtney" class="img-cover">
-                        </div>
-                    </div>
-                    <a href="team-details.html" class="team-card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
-                            <path d="M7.85986 2.43872L1.7123 8.58629L0.702148 7.57614L6.84971 1.42857H1.43131V0H9.28843V7.85714H7.85986V2.43872Z" fill="currentColor" />
-                        </svg>
-                    </a>
-                    <div class="team-card-content">
-                        <a href="team-details.html" class="team-card-name">
-                            <h2 class="h6 fz-font-2xl">Amelia Courtney</h2>
-                        </a>
-                        <p class="team-card-position fz-font-sm m-0 common-white">Project Manager</p>
-                    </div>
-                </div>
-            </div><div class="col-lg-3 col-md-6 pt-md-5 changeless">
-                <div class="team-card">
-                    <div class="team-card-image">
-                        <div class="anim-zoomin">
-                            <img src="assets/imgs/pages/img-19.webp" alt="Esther Howard" class="img-cover">
-                        </div>
-                    </div>
-                    <a href="team-details.html" class="team-card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
-                            <path d="M7.85986 2.43872L1.7123 8.58629L0.702148 7.57614L6.84971 1.42857H1.43131V0H9.28843V7.85714H7.85986V2.43872Z" fill="currentColor" />
-                        </svg>
-                    </a>
-                    <div class="team-card-content">
-                        <a href="team-details.html" class="team-card-name">
-                            <h2 class="h6 fz-font-2xl">Esther Howard</h2>
-                        </a>
-                        <p class="team-card-position fz-font-sm m-0 common-white">Software Developer</p>
-                    </div>
-                </div>
-            </div><div class="col-lg-3 col-md-6 changeless">
-                <div class="team-card">
-                    <div class="team-card-image">
-                        <div class="anim-zoomin">
-                            <img src="assets/imgs/pages/img-20.webp" alt="Jacob Jones" class="img-cover">
-                        </div>
-                    </div>
-                    <a href="team-details.html" class="team-card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
-                            <path d="M7.85986 2.43872L1.7123 8.58629L0.702148 7.57614L6.84971 1.42857H1.43131V0H9.28843V7.85714H7.85986V2.43872Z" fill="currentColor" />
-                        </svg>
-                    </a>
-                    <div class="team-card-content">
-                        <a href="team-details.html" class="team-card-name">
-                            <h2 class="h6 fz-font-2xl">Jacob Jones</h2>
-                        </a>
-                        <p class="team-card-position fz-font-sm m-0 common-white">Marketing CEO</p>
-                    </div>
-                </div>
-            </div>
+                    @endforeach
 
             {{-- Brand Section --}}
             <div class="sec-3-home-3 pt-130 pb-130 bg-neutral-50">
@@ -239,7 +191,7 @@
                             <div class="row g-xxl-5 g-4">
                                 <div class="col-xxl-5 col-lg-12 col-md-5 col-12 d-lg-none d-xxl-block">
                                     <div class="img-left ripple-image ripples">
-                                        <img src="assets/imgs/pages/img-56.webp" alt="orisa">
+                                        <img src="{{ $assetUrl($field('brand_image_left'), 'assets/imgs/pages/img-56.webp') }}" alt="{{ $field('brand_heading', 'Trusted by fast-growing brands worldwide') }}">
                                     </div>
                                 </div>
                                 <div class="col-xxl-7 col-lg-12 col-md-7 col-12">
@@ -248,10 +200,10 @@
                                             <svg xmlns="http://www.w3.org/2000/svg" width="34" height="43" viewBox="0 0 34 43" fill="none">
                                                 <path d="M12.5 26.66L3.00442 26.66C0.68247 26.66 -0.759179 24.4843 0.420807 22.761L14.986 1.48852C16.7967 -1.15609 21.5 -0.0494029 21.5 3.02127L21.5 16.34L30.9956 16.34C33.3175 16.34 34.7592 18.5157 33.5792 20.239L19.014 41.5115C17.2033 44.1561 12.5 43.0494 12.5 39.9787L12.5 26.66Z" fill="currentColor" />
                                             </svg>
-                                            <h1 class="h4 reveal-text">Trusted by fast-growing brands worldwide</h1>
+                                            <h1 class="h4 reveal-text">{{ $field('brand_heading', 'Trusted by fast-growing brands worldwide') }}</h1>
                                         </div>
                                         <div class="img-right">
-                                            <img src="assets/imgs/pages/img-57.webp" alt="orisa">
+                                            <img src="{{ $assetUrl($field('brand_image_right'), 'assets/imgs/pages/img-57.webp') }}" alt="{{ $field('brand_heading', 'Trusted by fast-growing brands worldwide') }}">
                                         </div>
                                     </div>
                                 </div>
@@ -318,8 +270,8 @@
                                             </div>
                                         </div>
                                         <div class="flex-grow-1 text-center d-flex flex-column justify-content-center align-items-center ms-lg-5">
-                                            <h2 class="mb-0">$<span class="odometer" data-count="850"></span>M+</h2>
-                                            <p class="fz-font-lg text-start mb-0">in total revenue generated <br> for clients</p>
+                                            <h2 class="mb-0">{{ $field('brand_metric_prefix', '$') }}<span class="odometer" data-count="{{ $field('brand_metric_value', '850') }}"></span>{{ $field('brand_metric_suffix', 'M+') }}</h2>
+                                            <p class="fz-font-lg text-start mb-0">{!! nl2br(e($field('brand_metric_text', "in total revenue generated\nfor clients"))) !!}</p>
                                         </div>
                                         <div class="at-brand-item at_fade_anim" data-delay=".6" data-fade-from="bottom" data-ease="bounce">
                                             <div class="brand">

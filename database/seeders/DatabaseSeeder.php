@@ -109,6 +109,27 @@ class DatabaseSeeder extends Seeder
             'content' => '<h2>Who We Are</h2><p>Clarivox Creatives is a digital creative agency.</p>',
             'template' => 'about',
             'status' => 'published',
+            'hero' => [
+                'eyebrow' => 'About Us',
+                'heading' => 'We are a creative digital agency shaping meaningful experiences',
+                'intro' => "At CLARIVOX Creatives, we tell the stories shaping Africa's future. As a modern communications and experiential agency, we connect culture with commerce, helping visionary brands, influential personalities, creative industries, governments, and institutions build relevance, spark conversations, and expand their influence across borders.",
+                'gallery_image_1' => 'assets/imgs/pages/img-117.webp',
+                'gallery_image_2' => 'assets/imgs/pages/img-118.webp',
+                'gallery_image_3' => 'assets/imgs/pages/img-119.webp',
+                'gallery_image_4' => 'assets/imgs/pages/img-120.webp',
+                'team_eyebrow' => 'MEET OUR TEAM',
+                'team_heading' => 'Behind the Visionaries',
+                'team_intro' => 'Creative experts designing meaningful digital experiences that help ambitious brands grow faster and lead their markets.',
+                'team_cta_label' => 'Join our Team',
+                'team_cta_url' => '/contact',
+                'brand_heading' => 'Trusted by fast-growing brands worldwide',
+                'brand_metric_prefix' => '$',
+                'brand_metric_value' => '850',
+                'brand_metric_suffix' => 'M+',
+                'brand_metric_text' => "in total revenue generated\nfor clients",
+                'brand_image_left' => 'assets/imgs/pages/img-56.webp',
+                'brand_image_right' => 'assets/imgs/pages/img-57.webp',
+            ],
         ]);
 
         foreach (

@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\TeamMemberResource\Pages;
 use App\Models\Site;
 use App\Models\TeamMember;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\KeyValue;
 use Filament\Schemas\Components\Section;
 use Filament\Forms\Components\Select;
@@ -16,6 +17,7 @@ use App\Filament\Resources\Concerns\AuthorizesResourcePermissions;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
@@ -46,6 +48,14 @@ class TeamMemberResource extends Resource
       Section::make('Bio')->schema([
         Textarea::make('bio')->rows(4)->columnSpanFull(),
       ]),
+      Section::make('Photo')->schema([
+        FileUpload::make('photo')
+          ->image()
+          ->disk('public')
+          ->directory('team')
+          ->maxSize(5024)
+          ->columnSpanFull(),
+      ]),
       Section::make('Social Links')->schema([
         KeyValue::make('social_links')->nullable()
           ->helperText('e.g. twitter: https://twitter.com/handle'),
@@ -57,6 +67,7 @@ class TeamMemberResource extends Resource
   {
     return $table
       ->columns([
+        ImageColumn::make('photo')->disk('public')->height(48)->width(48)->circular(),
         TextColumn::make('site.name')->badge()->color('violet'),
         TextColumn::make('name')->searchable()->sortable(),
         TextColumn::make('position'),
