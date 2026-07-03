@@ -4,7 +4,7 @@
     <div class="at-header-area at-header-spacing header-transparent">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-xl-1 col-6">
+                <div class="col-xl-2 col-6">
                     <div class="at-header-logo">
                         <a href="{{ route('creative.home') }}">
                             <img style="width: 150px; height: 80px;"
@@ -12,8 +12,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-xl-7 me-auto d-none d-xl-block">
-                    <div class="at-main-menu d-inline-flex justify-content-center">
+                <div class="col-xl-8 d-none d-xl-block">
+                    <div class="at-main-menu d-flex justify-content-center">
                         <nav class="at-mobile-menu-active">
                             <ul>
                                 <li class="">
@@ -35,7 +35,7 @@
                         </nav>
                     </div>
                 </div>
-                <div class="col-xl-4 col-6">
+                <div class="col-xl-2 col-6">
                     <div class="at-header-right gap-3 d-flex justify-content-end align-items-center">
                         <div class="dark-light-mode">
                             <label for="switch" class="toggle dark-light-switcher">
