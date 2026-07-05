@@ -38,6 +38,10 @@ class AdminPanelProvider extends PanelProvider
                 'info'    => Color::Sky,
             ])
             ->brandName('Clarivox CMS')
+            ->brandLogo(asset('assets/imgs/template/logo/clarivox.svg'))
+            ->darkModeBrandLogo(asset('assets/imgs/template/logo/adminlogo.png'))
+            ->brandLogoHeight('50px')
+            // ->brandLogoPadding('10px')
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
             ->pages([Dashboard::class])
