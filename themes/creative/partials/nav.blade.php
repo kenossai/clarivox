@@ -130,34 +130,14 @@
         <div class="at-offcanvas-menu d-xl-none pb-50">
             <nav></nav>
         </div>
-        <div class="at-offcanvas-gallery d-none d-xl-block">
-            <div class="sec-2-home-5__avatars-row d-flex gap-2">
-                <div class="sec-2-home-5__avatar-sm at-offcanvas-gallery-img">
-                    <img class="img-cover" src="assets/imgs/template/avatar/avatar-10.webp" alt="orisa">
-                </div>
-                <div class="sec-2-home-5__avatar-sm at-offcanvas-gallery-img">
-                    <img class="img-cover" src="assets/imgs/template/avatar/avatar-11.webp" alt="orisa">
-                </div>
-                <div class="sec-2-home-5__avatar-sm at-offcanvas-gallery-img">
-                    <img class="img-cover" src="assets/imgs/template/avatar/avatar-12.webp" alt="orisa">
-                </div>
-                <div class="sec-2-home-5__avatar-sm at-offcanvas-gallery-img">
-                    <img class="img-cover" src="assets/imgs/template/avatar/avatar-13.webp" alt="orisa">
-                </div>
-                <div class="sec-2-home-5__avatar-sm at-offcanvas-gallery-img">
-                    <img class="img-cover" src="assets/imgs/template/avatar/avatar-14.webp" alt="orisa">
-                </div>
-            </div>
-        </div>
         <div class="at-offcanvas-contact">
             <h4 class="h5 at-offcanvas-title sm">Get in touch</h4>
             <ul>
-                <li><a class="fz-font-lg" href="tel:2125557398">(212) 555-7398</a></li>
-                <li><a class="fz-font-lg" href="mailto:hello@aleric.com">hello@orisa.com</a></li>
+                <li><a class="fz-font-lg" href="tel:+2349076004021">+2349076004021</a></li>
+                <li><a class="fz-font-lg" href="mailto:info@clarivoxcreatives.com">info@clarivoxcreatives.com</a></li>
                 <li>
                     <a class="fz-font-lg" href="index-3_2.htm#">
-                        245 Fifth Avenue, Suite 1800 <br>
-                        New York, NY 10016, USA
+                        111 Idris Gidado Street, <br>Wuye District, Abuja
                     </a>
                 </li>
             </ul>
@@ -174,17 +154,6 @@
                                 fill="currentColor" />
                         </svg>
                         <span>Twitter</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="index-3_2.htm#" class="at-offcanvas-social__link" aria-label="Facebook">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
-                            fill="none" aria-hidden="true">
-                            <path
-                                d="M12.4024 18V11.0344H14.7347L15.0838 8.3265H12.4024V6.59765C12.4024 5.81364 12.62 5.27934 13.7443 5.27934L15.1783 5.27867V2.85676C14.9302 2.82382 14.0791 2.75006 13.0888 2.75006C11.0213 2.75006 9.606 4.01198 9.606 6.32952V8.3265H7.2677V11.0344H9.606V18H1C0.44772 18 0 17.5523 0 17V1C0 0.44772 0.44772 0 1 0H17C17.5523 0 18 0.44772 18 1V17C18 17.5523 17.5523 18 17 18H12.4024Z"
-                                fill="currentColor" />
-                        </svg>
-                        <span>Facebook</span>
                     </a>
                 </li>
                 <li>
@@ -209,17 +178,7 @@
                         <span>Instagram</span>
                     </a>
                 </li>
-                <li>
-                    <a href="index-3_2.htm#" class="at-offcanvas-social__link" aria-label="Youtube">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13"
-                            fill="none" aria-hidden="true">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M16.0322 0.388283C16.8071 0.602295 17.4162 1.23059 17.6237 2.03009C17.9985 3.47775 18 6.49997 18 6.49997C18 6.49997 18 9.52214 17.6237 10.9698C17.4162 11.7694 16.8071 12.3977 16.0322 12.6116C14.6291 13 8.99997 13 8.99997 13C8.99997 13 3.37092 13 1.96772 12.6116C1.1928 12.3977 0.583804 11.7694 0.376354 10.9698C-3.83173e-08 9.52214 0 6.49997 0 6.49997C0 6.49997 -3.83173e-08 3.47775 0.376354 2.03009C0.583804 1.23059 1.1928 0.602295 1.96772 0.388283C3.37092 1.18595e-07 8.99997 0 8.99997 0C8.99997 0 14.6291 1.18595e-07 16.0322 0.388283ZM11.8751 6.50027L7.19879 9.2855V3.71499L11.8751 6.50027Z"
-                                fill="currentColor" />
-                        </svg>
-                        <span>Youtube</span>
-                    </a>
-                </li>
+
             </ul>
         </div>
     </div>
