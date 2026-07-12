@@ -44,37 +44,17 @@
                                 <div>
                                     <h3 class="h6 fw-600">Ofice</h3>
                                     <span class="fz-font-md neutral-500">
-                                        205 North Michigan Avenue, Suite 810
+                                        111 Idris Gidado Street, Wuye District, Abuja
                                         <br class="d-block">
-                                        Chicago, 60601, USA
-                                        <br class="d-block">
-                                        Phone: <span class="neutral-900"><a href="tel:+1234567890">+1234567890</a></span>
-                                        <br class="d-block">
-                                        Email: <span class="neutral-900"><a
-                                                href="mailto:hello@orisa.com">hello@orisa.com</a></span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="d-flex gap-4 w-lg-50">
-                                <div class="icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-                                        viewBox="0 0 40 40" fill="none">
-                                        <path d="M20 20V10L30 0H40V10L30 20H20Z" fill="currentColor" />
-                                        <path d="M20 30V20H10L20 10L10 0H0V20H10L0 30V40H10L20 30Z" fill="currentColor" />
-                                        <path d="M20 30L30 40H40V20H30L20 30Z" fill="currentColor" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="h6 fw-600">Studio</h3>
-                                    <span class="fz-font-md neutral-500">
-                                        245 Fifth Avenue, Suite 1800
-                                        <br class="d-block">
-                                        New York, NY 10016, USA
-                                        <br class="d-block">
-                                        Phone: <span class="neutral-900"><a href="tel:+2125557398">+2125557398</a></span>
+                                        Phone: <span class="neutral-900"><a
+                                                href="tel:+2349076004021">+2349076004021</a></span>
+                                        <br>
+                                        <span class="neutral-900"><a href="tel:+2348137424176">+2348137424176</a></span>
                                         <br class="d-block">
                                         Email: <span class="neutral-900"><a
-                                                href="mailto:sale@orisa.com">sale@orisa.com</a></span>
+                                                href="mailto:hello@orisa.com">admin@clarivoxcreatives.com,
+                                                <br> info@clarivoxcreatives.com,
+                                                <br>enquire@clarivoxcreatives.com</a></span>
                                     </span>
                                 </div>
                             </div>
@@ -93,21 +73,7 @@
                         </div>
                     </div>
                     <div class="sec-2-home-5__avatars-row d-flex gap-2 py-3">
-                        <div class="sec-2-home-5__avatar-sm at-offcanvas-gallery-img">
-                            <img class="img-cover" src="assets/imgs/template/avatar/avatar-10.webp" alt="orisa">
-                        </div>
-                        <div class="sec-2-home-5__avatar-sm at-offcanvas-gallery-img">
-                            <img class="img-cover" src="assets/imgs/template/avatar/avatar-11.webp" alt="orisa">
-                        </div>
-                        <div class="sec-2-home-5__avatar-sm at-offcanvas-gallery-img">
-                            <img class="img-cover" src="assets/imgs/template/avatar/avatar-12.webp" alt="orisa">
-                        </div>
-                        <div class="sec-2-home-5__avatar-sm at-offcanvas-gallery-img">
-                            <img class="img-cover" src="assets/imgs/template/avatar/avatar-13.webp" alt="orisa">
-                        </div>
-                        <div class="sec-2-home-5__avatar-sm at-offcanvas-gallery-img d-none d-md-block">
-                            <img class="img-cover" src="assets/imgs/template/avatar/avatar-14.webp" alt="orisa">
-                        </div>
+
                     </div>
                     <h4 class="h6 mb-4 fz-font-lg">
                         Start the conversation by sharing your vision. <br>
@@ -120,16 +86,16 @@
                     <h4>Drop us a line</h4>
                     <form class="sec-4-about-form" action="#" method="post">
                         <div class="sec-4-about-form__field">
-                            <input type="text" class="sec-4-about-form__input" name="name"
-                                placeholder="Your name *" required aria-label="Your name">
+                            <input type="text" class="sec-4-about-form__input" name="name" placeholder="Your name *"
+                                required aria-label="Your name">
                         </div>
                         <div class="sec-4-about-form__field">
-                            <input type="email" class="sec-4-about-form__input" name="email"
-                                placeholder="Your email *" required aria-label="Your email">
+                            <input type="email" class="sec-4-about-form__input" name="email" placeholder="Your email *"
+                                required aria-label="Your email">
                         </div>
                         <div class="sec-4-about-form__field">
-                            <input type="tel" class="sec-4-about-form__input" name="phone"
-                                placeholder="Your phone *" required aria-label="Your phone">
+                            <input type="tel" class="sec-4-about-form__input" name="phone" placeholder="Your phone *"
+                                required aria-label="Your phone">
                         </div>
                         <div class="sec-4-about-form__field">
                             <textarea class="sec-4-about-form__input sec-4-about-form__textarea" name="message" placeholder="Your message *"
@@ -248,29 +214,6 @@
                                             </svg>
                                         </div>
                                         Instagram
-                                    </div>
-                                    <div class="icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10"
-                                            viewBox="0 0 12 10" fill="none">
-                                            <path
-                                                d="M7.60201e-05 6.26559L0 2.03894e-05L1.49997 -4.58971e-07L1.50004 4.87322L9.12873 4.87329L6.16652 2.12355L7.22714 1.139L12 5.56948L7.22713 10L6.16652 9.01545L9.12876 6.26566L7.60201e-05 6.26559Z"
-                                                fill="currentColor" />
-                                        </svg>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <div class="icon-social">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13"
-                                                viewBox="0 0 18 13" fill="none">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M16.0322 0.388283C16.8071 0.602295 17.4162 1.23059 17.6237 2.03009C17.9985 3.47775 18 6.49997 18 6.49997C18 6.49997 18 9.52214 17.6237 10.9698C17.4162 11.7694 16.8071 12.3977 16.0322 12.6116C14.6291 13 8.99997 13 8.99997 13C8.99997 13 3.37092 13 1.96772 12.6116C1.1928 12.3977 0.583804 11.7694 0.376354 10.9698C-3.83173e-08 9.52214 0 6.49997 0 6.49997C0 6.49997 -3.83173e-08 3.47775 0.376354 2.03009C0.583804 1.23059 1.1928 0.602295 1.96772 0.388283C3.37092 1.18595e-07 8.99997 0 8.99997 0C8.99997 0 14.6291 1.18595e-07 16.0322 0.388283ZM11.8751 6.50027L7.19879 9.2855V3.71499L11.8751 6.50027Z"
-                                                    fill="currentColor" />
-                                            </svg>
-                                        </div>
-                                        Youtube
                                     </div>
                                     <div class="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10"
