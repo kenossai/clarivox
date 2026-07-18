@@ -72,7 +72,7 @@ class ArticleResource extends Resource
 
       Section::make('Content')->schema([
 
-        Textarea::make('excerpt')->rows(3)->maxLength(500)->columnSpanFull(),
+        Textarea::make('excerpt')->rows(3)->maxLength(100000)->columnSpanFull(),
         RichEditor::make('content')
           ->fileAttachmentsDisk('public')
           ->fileAttachmentsDirectory('articles')
