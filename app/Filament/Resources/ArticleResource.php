@@ -3,11 +3,13 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ArticleResource\Pages;
+use App\Filament\Resources\Concerns\AuthorizesResourcePermissions;
 use App\Models\Article;
 use App\Models\Author;
 use App\Models\Category;
 use App\Models\Site;
 use App\Models\Tag;
+use Filament\Actions\Action;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -21,7 +23,6 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Resources\Resource;
-use App\Filament\Resources\Concerns\AuthorizesResourcePermissions;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 use Filament\Tables\Columns\IconColumn;
@@ -31,7 +32,6 @@ use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use ZipStream\File;
 
 class ArticleResource extends Resource
 {
@@ -132,7 +132,14 @@ class ArticleResource extends Resource
         SelectFilter::make('category')->relationship('category', 'name'),
         TrashedFilter::make(),
       ])
-      ->actions([EditAction::make()])
+      ->actions([
+        Action::make('viewArticle')
+          ->label('View Article')
+          ->icon('heroicon-o-eye')
+          ->url(fn(Article $record): string => static::getArticleUrl($record))
+          ->openUrlInNewTab(),
+        EditAction::make(),
+      ])
       ->bulkActions([
         BulkActionGroup::make([
           DeleteBulkAction::make(),
@@ -146,6 +153,11 @@ class ArticleResource extends Resource
   public static function getEloquentQuery(): \Illuminate\Database\Eloquent\Builder
   {
     return parent::getEloquentQuery()->withoutGlobalScopes([SoftDeletingScope::class]);
+  }
+
+  public static function getArticleUrl(Article $article): string
+  {
+    return route('news.article.show', ['slug' => $article->slug]);
   }
 
   public static function getPages(): array
