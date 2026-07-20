@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\Site;
+use Illuminate\Support\Str;
 
 class SeoService
 {
@@ -44,9 +45,22 @@ class SeoService
     return $this;
   }
 
-  public function image(string|null $url): static
+  public function image(string|null $url, int $width = 1200, int $height = 630): static
   {
+    if ($url === null || trim($url) === '') {
+      return $this;
+    }
+
+    if (!Str::startsWith($url, ['http://', 'https://'])) {
+      $url = asset(ltrim($url, '/'));
+    }
+
     $this->meta['og:image'] = $url;
+    if (Str::startsWith($url, 'https://')) {
+      $this->meta['og:image:secure_url'] = $url;
+    }
+    $this->meta['og:image:width'] = (string) $width;
+    $this->meta['og:image:height'] = (string) $height;
     $this->meta['twitter:image'] = $url;
 
     return $this;

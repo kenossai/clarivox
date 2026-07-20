@@ -34,8 +34,10 @@ class ArticleController extends Controller
       ])
       ->twitterCard('summary_large_image');
 
-    if ($article->getFirstMediaUrl('og_image')) {
-      $seo->image($article->getFirstMediaUrl('og_image'));
+    $shareImage = $article->getFirstMediaUrl('og_image') ?: $article->featured_image_url;
+
+    if ($shareImage) {
+      $seo->image($shareImage);
     }
 
     $related = Article::where('site_id', $site->id)
