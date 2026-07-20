@@ -64,6 +64,31 @@
             margin: 1.5em 0
         }
 
+        .prose-content .social-embed {
+            margin: 1.5em auto
+        }
+
+        .prose-content blockquote.social-embed {
+            border-left: none;
+            padding-left: 0;
+            color: inherit
+        }
+
+        .prose-content .social-embed--iframe {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+            background: var(--bg-elevated)
+        }
+
+        .prose-content .social-embed--iframe iframe {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            border: 0
+        }
+
         .prose-content a {
             color: var(--accent)
         }
@@ -297,7 +322,7 @@
 
             {{-- Body --}}
             <div class="prose-content">
-                {!! $article->content !!}
+                {!! app(\App\Support\ArticleContentRenderer::class)->render($article->content) !!}
             </div>
 
             {{-- Tags --}}
@@ -411,3 +436,10 @@
 
     </div>
 @endsection
+
+@push('scripts')
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script async src="https://www.instagram.com/embed.js"></script>
+    <script async src="https://www.tiktok.com/embed.js"></script>
+    <script async src="https://www.threads.net/embed.js"></script>
+@endpush
