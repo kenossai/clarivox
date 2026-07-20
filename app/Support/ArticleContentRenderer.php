@@ -34,13 +34,15 @@ class ArticleContentRenderer
         continue;
       }
 
-      $url = $this->standaloneUrl($paragraph);
+      $embed = null;
 
-      if ($url === null) {
-        continue;
+      if ($url = $this->standaloneUrl($paragraph)) {
+        $embed = $this->embedForUrl($document, $url);
       }
 
-      $embed = $this->embedForUrl($document, $url);
+      if ($embed === null && $url = $this->urlFromEscapedEmbedCode($paragraph)) {
+        $embed = $this->embedForUrl($document, $url);
+      }
 
       if ($embed === null) {
         continue;
@@ -77,6 +79,47 @@ class ArticleContentRenderer
     }
 
     return null;
+  }
+
+  private function urlFromEscapedEmbedCode(DOMElement $paragraph): ?string
+  {
+    $content = html_entity_decode($paragraph->textContent, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+
+    if (! str_contains($content, '<blockquote') && ! str_contains($content, '<iframe') && ! str_contains($content, '<script')) {
+      return null;
+    }
+
+    $urls = [];
+
+    foreach ($paragraph->getElementsByTagName('a') as $link) {
+      $urls[] = $link->getAttribute('href');
+    }
+
+    if (preg_match_all('~https?://[^\s<>"\']+~i', $content, $matches)) {
+      $urls = [...$urls, ...$matches[0]];
+    }
+
+    foreach ($urls as $url) {
+      $url = html_entity_decode(rtrim($url, '.,;'), ENT_QUOTES | ENT_HTML5, 'UTF-8');
+
+      if ($this->isEmbeddableUrl($url)) {
+        return $url;
+      }
+    }
+
+    return null;
+  }
+
+  private function isEmbeddableUrl(string $url): bool
+  {
+    return $this->xPostUrl($url) !== null
+      || $this->youtubeVideoId($url) !== null
+      || $this->vimeoVideoId($url) !== null
+      || $this->instagramPostUrl($url) !== null
+      || $this->tikTokPost($url) !== null
+      || $this->facebookPostUrl($url) !== null
+      || $this->threadsPostUrl($url) !== null
+      || $this->linkedInActivityId($url) !== null;
   }
 
   private function embedForUrl(DOMDocument $document, string $url): ?DOMElement

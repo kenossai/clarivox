@@ -23,6 +23,17 @@ class ArticleContentRendererTest extends TestCase
     $this->assertStringContainsString('<a href="https://twitter.com/funebiprogress/status/1814400000000000000">https://twitter.com/funebiprogress/status/1814400000000000000</a>', $html);
   }
 
+  public function test_it_converts_escaped_x_embed_code_from_the_editor(): void
+  {
+    $content = '<p>&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;If you&amp;#39;ve been following me for a while. &lt;a href=&quot;https://x.com/funebiprogress/status/2078935121114148975?ref_src=twsrc%5Etfw&quot;&gt;July 19, 2026&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt; &lt;script async src=&quot;https://platform.x.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</p>';
+
+    $html = (new ArticleContentRenderer())->render($content);
+
+    $this->assertStringContainsString('<blockquote class="twitter-tweet social-embed" data-dnt="true">', $html);
+    $this->assertStringContainsString('<a href="https://twitter.com/funebiprogress/status/2078935121114148975">https://twitter.com/funebiprogress/status/2078935121114148975</a>', $html);
+    $this->assertStringNotContainsString('&lt;blockquote', $html);
+  }
+
   public function test_it_converts_youtube_links_to_embeds(): void
   {
     $html = (new ArticleContentRenderer())->render('<p>https://www.youtube.com/watch?v=dQw4w9WgXcQ</p>');
