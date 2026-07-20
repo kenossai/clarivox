@@ -8,6 +8,7 @@
     <title>@yield('title', config('app.name'))</title>
 
     {!! app(\App\Services\SeoService::class)->render() !!}
+    @include('components.google-analytics')
 
     {{-- Styles --}}
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/imgs/template/logo/favicon.svg') }}">

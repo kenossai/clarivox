@@ -17,6 +17,7 @@
     </script>
 
     {!! app(\App\Services\SeoService::class)->render() !!}
+    @include('components.google-analytics')
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

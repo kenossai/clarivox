@@ -90,7 +90,11 @@ class Site extends Model
   {
     $setting = $this->settings()->where('key', $key)->first();
 
-    return $setting ? $setting->value : $default;
+    if ($setting) {
+      return $setting->value;
+    }
+
+    return data_get($this->getAttribute('settings'), $key, $default);
   }
 
   public function isActive(): bool
