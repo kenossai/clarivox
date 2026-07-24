@@ -478,7 +478,7 @@
     </div>
 
     {{-- ── Testimonials ─────────────────────────────────────── --}}
-    <div class="testimonials-section">
+    {{-- <div class="testimonials-section">
         <div class="section-head">Trusted by tech leaders</div>
         <div class="testimonials-grid">
             <div class="testimonial-card">
@@ -515,7 +515,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     @push('scripts')
         <script>
