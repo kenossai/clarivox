@@ -61,6 +61,23 @@ class SiteResource extends Resource
         TextInput::make('favicon')->nullable()->placeholder('URL or storage path'),
       ])->columns(2),
 
+      Section::make('Analytics & Ads')->schema([
+        TextInput::make('settings.google_analytics_id')
+          ->label('Google Analytics Measurement ID')
+          ->placeholder('G-XXXXXXXXXX')
+          ->helperText('Overrides the global GOOGLE_ANALYTICS_ID for this site only. Leave blank to use the global default.'),
+        TextInput::make('settings.google_adsense_client_id')
+          ->label('Google AdSense Client ID')
+          ->placeholder('ca-pub-XXXXXXXXXXXXXXXX')
+          ->helperText('Overrides the global GOOGLE_ADSENSE_CLIENT_ID for this site only.'),
+        TextInput::make('settings.google_adsense_article_top_slot')
+          ->label('AdSense Article Top Slot ID'),
+        TextInput::make('settings.google_adsense_article_inline_slot')
+          ->label('AdSense Article Inline Slot ID'),
+        TextInput::make('settings.google_adsense_article_sidebar_slot')
+          ->label('AdSense Article Sidebar Slot ID'),
+      ])->columns(2),
+
       Section::make('Extra Settings')->schema([
         KeyValue::make('settings')
           ->nullable()
