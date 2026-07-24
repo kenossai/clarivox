@@ -16,6 +16,19 @@
         })();
     </script>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N062K27XDG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-N062K27XDG');
+    </script>
+
     {!! app(\App\Services\SeoService::class)->render() !!}
     @include('components.google-analytics')
     @include('components.google-adsense')
@@ -604,6 +617,18 @@
 
     @stack('styles')
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N062K27XDG"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-N062K27XDG');
+</script>
 
 <body>
 
