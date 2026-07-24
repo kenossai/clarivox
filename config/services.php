@@ -26,6 +26,13 @@ return [
         'measurement_id' => env('GOOGLE_ANALYTICS_ID'),
     ],
 
+    'google_adsense' => [
+        'client_id' => env('GOOGLE_ADSENSE_CLIENT_ID'),
+        'article_top_slot' => env('GOOGLE_ADSENSE_ARTICLE_TOP_SLOT'),
+        'article_inline_slot' => env('GOOGLE_ADSENSE_ARTICLE_INLINE_SLOT'),
+        'article_sidebar_slot' => env('GOOGLE_ADSENSE_ARTICLE_SIDEBAR_SLOT'),
+    ],
+
     'ses' => [
         'key' => env('AWS_ACCESS_KEY_ID'),
         'secret' => env('AWS_SECRET_ACCESS_KEY'),

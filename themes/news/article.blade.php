@@ -105,6 +105,18 @@
             display: block
         }
 
+        .adsense-slot {
+            width: 100%;
+            margin: 24px 0;
+            min-height: 90px;
+            overflow: hidden
+        }
+
+        .adsense-slot--sidebar {
+            margin: 0 0 28px;
+            min-height: 250px
+        }
+
         .tags-row {
             display: flex;
             flex-wrap: wrap;
@@ -320,10 +332,14 @@
                 </div>
             @endif
 
+            <x-adsense-ad ad-slot="article_top_slot" class="adsense-slot--article-top" />
+
             {{-- Body --}}
             <div class="prose-content">
                 {!! app(\App\Support\ArticleContentRenderer::class)->render($article->content) !!}
             </div>
+
+            <x-adsense-ad ad-slot="article_inline_slot" class="adsense-slot--article-inline" />
 
             {{-- Tags --}}
             @if ($article->tags->isNotEmpty())
@@ -404,6 +420,8 @@
 
         {{-- ── Aside ──────────────────────────────────────── --}}
         <aside class="article-aside">
+            <x-adsense-ad ad-slot="article_sidebar_slot" class="adsense-slot--sidebar" />
+
             @if (isset($related) && $related->isNotEmpty())
                 <div class="aside-box">
                     <h4>More Stories</h4>
