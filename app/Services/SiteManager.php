@@ -7,17 +7,20 @@ use Illuminate\Support\Facades\Cache;
 
 class SiteManager
 {
-  private const CACHE_PREFIX = 'site:domain:';
+  private const CACHE_PREFIX = 'site:domain:v2:';
 
   private const CACHE_TTL = 300; // 5 minutes
 
   public function findByDomain(string $domain): ?Site
   {
-    return Cache::remember(
+    // Cache raw attributes, not the model: the cache refuses to unserialize objects
+    $attributes = Cache::remember(
       self::CACHE_PREFIX . $domain,
       self::CACHE_TTL,
-      fn() => Site::where('domain', $domain)->first()
+      fn() => Site::where('domain', $domain)->first()?->getAttributes()
     );
+
+    return is_array($attributes) ? (new Site)->newFromBuilder($attributes) : null;
   }
 
   public function current(): ?Site

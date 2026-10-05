@@ -96,6 +96,19 @@ class PublicSiteTest extends TestCase
     $this->get('http://clarivoxnews.com/search')->assertNotFound();
   }
 
+  public function test_site_resolves_from_a_serializing_cache_store(): void
+  {
+    // Production stores serialize values and refuse to unserialize objects
+    config(['cache.default' => 'file', 'cache.stores.file.path' => storage_path('framework/testing/cache')]);
+    \Illuminate\Support\Facades\Cache::flush();
+    $this->newsSite();
+
+    $this->get('http://clarivoxnews.com/sitemap.xml')->assertOk();
+    $this->get('http://clarivoxnews.com/sitemap.xml')->assertOk();
+
+    \Illuminate\Support\Facades\Cache::flush();
+  }
+
   public function test_site_cache_is_cleared_when_site_changes(): void
   {
     $site = $this->newsSite();
