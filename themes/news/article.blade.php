@@ -405,6 +405,7 @@
                             Leave a Comment</div>
                         <form action="{{ route('news.article.comment', $article->slug) }}" method="POST">
                             @csrf
+                            <x-honeypot />
                             <div class="form-row">
                                 <input type="text" name="author_name" placeholder="Your name *" required>
                                 <input type="email" name="author_email" placeholder="Your email *" required>
@@ -446,6 +447,7 @@
                     to your inbox.</p>
                 <form action="{{ route('news.newsletter.subscribe') }}" method="POST">
                     @csrf
+                    <x-honeypot />
                     <input type="email" name="email" placeholder="your@email.com" required style="margin-bottom:8px">
                     <button type="submit" class="btn-comment" style="width:100%;justify-content:center">Subscribe</button>
                 </form>

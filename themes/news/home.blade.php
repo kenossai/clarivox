@@ -565,6 +565,7 @@
                         investors, and builders.</p>
                     <form action="{{ route('news.newsletter.subscribe') }}" method="POST">
                         @csrf
+                        <x-honeypot />
                         <input type="email" name="email" placeholder="your@email.com" required>
                         <button type="submit">
                             Subscribe Free

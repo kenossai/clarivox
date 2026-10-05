@@ -31,7 +31,7 @@ $creativeRoutes = function () {
 
     // Contact
     Route::get('/contact', [ContactController::class, 'show'])->name('creative.contact.show');
-    Route::post('/contact', [ContactController::class, 'submit'])->name('creative.contact.submit');
+    Route::post('/contact', [ContactController::class, 'submit'])->middleware('throttle:forms')->name('creative.contact.submit');
 
     // Dynamic CMS pages (must come last)
     Route::get('/{slug}', [PageController::class, 'show'])->name('creative.page.show');

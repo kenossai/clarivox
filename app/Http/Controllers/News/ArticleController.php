@@ -66,6 +66,7 @@ class ArticleController extends Controller
       'author_email' => ['required', 'email', 'max:255'],
       'content' => ['required', 'string', 'max:3000'],
       'parent_id' => ['nullable', 'integer', 'exists:comments,id'],
+      'website' => ['prohibited'],
     ]);
 
     Comment::create([

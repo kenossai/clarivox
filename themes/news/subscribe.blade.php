@@ -430,6 +430,7 @@
             <h2>Start 14-Day Trial</h2>
             <form action="{{ route('news.subscribe.trial') }}" method="POST">
                 @csrf
+                <x-honeypot />
                 <input type="hidden" name="plan" id="selected-plan" value="pro">
                 <div class="form-field">
                     <label for="tf-name">Full Name</label>

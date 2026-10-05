@@ -84,22 +84,34 @@
             <div class="row g-5 pt-120 align-items-end">
                 <div class="col-xxl-6 col-lg-7">
                     <h4>Drop us a line</h4>
-                    <form class="sec-4-about-form" action="#" method="post">
+                    @if (session('success'))
+                        <p class="mb-4" role="status">{{ session('success') }}</p>
+                    @endif
+                    @if ($errors->any())
+                        <ul class="mb-4" role="alert">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
+                    <form class="sec-4-about-form" action="{{ route('creative.contact.submit') }}" method="post">
+                        @csrf
+                        <x-honeypot />
                         <div class="sec-4-about-form__field">
-                            <input type="text" class="sec-4-about-form__input" name="name" placeholder="Your name *"
+                            <input type="text" class="sec-4-about-form__input" name="name" value="{{ old('name') }}" placeholder="Your name *"
                                 required aria-label="Your name">
                         </div>
                         <div class="sec-4-about-form__field">
-                            <input type="email" class="sec-4-about-form__input" name="email" placeholder="Your email *"
+                            <input type="email" class="sec-4-about-form__input" name="email" value="{{ old('email') }}" placeholder="Your email *"
                                 required aria-label="Your email">
                         </div>
                         <div class="sec-4-about-form__field">
-                            <input type="tel" class="sec-4-about-form__input" name="phone" placeholder="Your phone *"
+                            <input type="tel" class="sec-4-about-form__input" name="phone" value="{{ old('phone') }}" placeholder="Your phone *"
                                 required aria-label="Your phone">
                         </div>
                         <div class="sec-4-about-form__field">
                             <textarea class="sec-4-about-form__input sec-4-about-form__textarea" name="message" placeholder="Your message *"
-                                rows="5" required aria-label="Your message"></textarea>
+                                rows="5" required aria-label="Your message">{{ old('message') }}</textarea>
                         </div>
                         <div class="sec-4-about-form__actions">
                             <button type="submit" class="sec-4-about-form__btn at-btn">

@@ -6,6 +6,7 @@
         <p class="text-red-100 text-sm mb-4">Get the latest news delivered to your inbox.</p>
         <form action="{{ route('news.newsletter.subscribe') }}" method="POST">
             @csrf
+            <x-honeypot />
             <input type="email" name="email" placeholder="your@email.com" required
                 class="w-full rounded-lg px-4 py-2.5 text-gray-900 text-sm mb-3 focus:outline-none">
             <button type="submit"

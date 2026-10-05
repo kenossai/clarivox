@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Services\SiteManager;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Site extends Model
@@ -21,6 +22,21 @@ class Site extends Model
   protected $casts = [
     'settings' => 'array',
   ];
+
+  protected static function booted(): void
+  {
+    $forget = function (Site $site) {
+      $manager = app(SiteManager::class);
+      $manager->forgetDomainCache($site->domain);
+
+      if ($site->getOriginal('domain') && $site->getOriginal('domain') !== $site->domain) {
+        $manager->forgetDomainCache($site->getOriginal('domain'));
+      }
+    };
+
+    static::saved($forget);
+    static::deleted($forget);
+  }
 
   // ─── Relationships ────────────────────────────────────────────────
 

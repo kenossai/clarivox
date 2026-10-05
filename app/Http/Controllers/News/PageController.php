@@ -53,6 +53,7 @@ class PageController extends Controller
     $request->validate([
       'name'  => 'required|string|max:120',
       'email' => 'required|email|max:200',
+      'website' => 'prohibited',
     ]);
 
     // Subscribe them to the newsletter if not already subscribed

@@ -16,6 +16,7 @@ class NewsletterController extends Controller
     $request->validate([
       'email' => ['required', 'email', 'max:255'],
       'name' => ['nullable', 'string', 'max:255'],
+      'website' => ['prohibited'],
     ]);
 
     NewsletterSubscriber::firstOrCreate(

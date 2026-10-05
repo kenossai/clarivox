@@ -24,7 +24,7 @@ Route::domain(config('cms.domains.news'))->group(function () {
 
     // Articles
     Route::get('/article/{slug}', [ArticleController::class, 'show'])->name('news.article.show');
-    Route::post('/article/{slug}/comment', [ArticleController::class, 'comment'])->name('news.article.comment');
+    Route::post('/article/{slug}/comment', [ArticleController::class, 'comment'])->middleware('throttle:forms')->name('news.article.comment');
 
     // Categories
     Route::get('/category/{slug}', [CategoryController::class, 'show'])->name('news.category.show');
@@ -39,7 +39,7 @@ Route::domain(config('cms.domains.news'))->group(function () {
     Route::get('/search', [SearchController::class, 'index'])->name('news.search');
 
     // Newsletter
-    Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])->name('news.newsletter.subscribe');
+    Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])->middleware('throttle:forms')->name('news.newsletter.subscribe');
     Route::get('/newsletter/unsubscribe/{token}', [NewsletterController::class, 'unsubscribe'])->name('news.newsletter.unsubscribe');
 
     // Sitemap
@@ -48,6 +48,6 @@ Route::domain(config('cms.domains.news'))->group(function () {
     // Static pages
     Route::get('/about', [NewsPageController::class, 'about'])->name('news.about');
     Route::get('/subscribe', [NewsPageController::class, 'subscribe'])->name('news.subscribe');
-    Route::post('/subscribe', [NewsPageController::class, 'subscribeTrial'])->name('news.subscribe.trial');
+    Route::post('/subscribe', [NewsPageController::class, 'subscribeTrial'])->middleware('throttle:forms')->name('news.subscribe.trial');
   });
 });
